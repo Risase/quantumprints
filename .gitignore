@@ -1,1 +1,239 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Quantum Prints — Local Admin (DO NOT DEPLOY)</title>
+<style>
+:root{
+  --bg:#090909;--bg2:#101010;--bg3:#181614;--surface:#1e1c18;
+  --border:#2e2820;--border2:#3e3828;
+  --gold:#c4922a;--gold2:#d4a84a;--gold3:#e8c060;
+  --silver:#8c8c96;--green:#5a8a3a;
+  --text:#e8e0d0;--text2:#9a8e78;--text3:#5a5248;
+  --white:#f4ede0;--success:#5a8a3a;--danger:#c04040;
+  --mono:"JetBrains Mono",monospace;
+  --display:"Georgia",serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0 0 60px;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--border2);}
+
+/* WARNING BANNER */
+.warn-banner{background:#3a0000;border-bottom:2px solid var(--danger);padding:12px 2rem;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100;}
+.warn-icon{font-size:18px;flex-shrink:0;}
+.warn-text{font-size:0.72rem;color:#ff8080;font-family:var(--mono);letter-spacing:1px;}
+.warn-text strong{color:#ffaaaa;display:block;margin-bottom:2px;font-size:0.78rem;}
+
+/* HEADER */
+.admin-header{padding:2rem 2rem 1rem;border-bottom:1px solid var(--border2);}
+.admin-title{font-family:var(--display);font-size:2rem;letter-spacing:4px;color:var(--white);font-weight:700;}
+.admin-title span{color:var(--silver);}
+.admin-sub{font-family:var(--mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px;margin-top:4px;}
+
+/* LAYOUT */
+.admin-body{padding:2rem;max-width:960px;}
+.admin-sec{font-family:var(--mono);font-size:0.59rem;letter-spacing:2px;text-transform:uppercase;margin:2rem 0 0.9rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:8px;}
+.admin-sec::before{content:"✦";font-size:0.53rem;}
+.admin-sec.c{color:var(--gold);}.admin-sec.g{color:var(--green);}.admin-sec.gd{color:var(--silver);}
+.admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem;}
+.admin-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem;}
+.admin-field{display:flex;flex-direction:column;gap:0.3rem;}
+.admin-field label{font-family:var(--mono);font-size:0.56rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
+.admin-field input{background:var(--bg3);border:1px solid var(--border2);padding:9px 12px;font-family:var(--mono);font-size:0.82rem;outline:none;transition:border-color 0.2s;width:100%;color:var(--text);}
+.admin-field input.c{color:var(--gold);}.admin-field input.c:focus{border-color:var(--gold);}
+.admin-field input.g{color:var(--green);}.admin-field input.g:focus{border-color:var(--green);}
+.admin-field input.gd{color:var(--silver);text-transform:uppercase;letter-spacing:2px;}.admin-field input.gd:focus{border-color:var(--silver);}
+.admin-field .hint{font-size:0.56rem;color:var(--text3);font-style:italic;margin-top:2px;}
+
+/* GENERATE BUTTON */
+.gen-bar{position:sticky;bottom:0;background:rgba(9,9,9,0.97);border-top:1px solid var(--border2);padding:1rem 2rem;display:flex;align-items:center;gap:1rem;backdrop-filter:blur(8px);}
+.btn-gen{background:var(--gold);color:var(--bg);border:none;padding:12px 28px;font-family:var(--mono);font-size:0.78rem;font-weight:700;letter-spacing:2px;cursor:pointer;transition:all 0.2s;text-transform:uppercase;}
+.btn-gen:hover{background:var(--gold2);}
+.btn-copy{background:transparent;color:var(--silver);border:1px solid var(--silver);padding:12px 20px;font-family:var(--mono);font-size:0.78rem;letter-spacing:2px;cursor:pointer;transition:all 0.2s;text-transform:uppercase;}
+.btn-copy:hover{background:var(--silver);color:var(--bg);}
+.gen-status{font-family:var(--mono);font-size:0.67rem;color:var(--success);opacity:0;transition:opacity 0.3s;}
+.gen-status.show{opacity:1;}
+
+/* OUTPUT */
+.output-box{margin:2rem;display:none;}
+.output-box.show{display:block;}
+.output-title{font-family:var(--mono);font-size:0.62rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.6rem;}
+.output-code{background:var(--bg2);border:1px solid var(--border2);border-left:3px solid var(--gold);padding:1.4rem;font-family:var(--mono);font-size:0.73rem;color:var(--gold2);line-height:1.8;white-space:pre;overflow-x:auto;max-height:380px;overflow-y:auto;}
+.output-instructions{background:rgba(90,138,58,0.08);border:1px solid rgba(90,138,58,0.25);border-left:3px solid var(--green);padding:1rem 1.2rem;margin-top:1rem;font-size:0.78rem;color:var(--text2);line-height:1.8;}
+.output-instructions strong{color:var(--green);display:block;margin-bottom:4px;font-family:var(--mono);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;}
+.output-instructions ol{padding-left:1.2rem;margin-top:4px;}
+.output-instructions li{margin-bottom:4px;}
+.output-instructions code{background:var(--bg3);padding:1px 5px;font-family:var(--mono);font-size:0.72rem;color:var(--gold2);}
+
+@media(max-width:700px){.admin-grid,.admin-grid-2{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="warn-banner">
+  <span class="warn-icon">⚠️</span>
+  <div class="warn-text">
+    <strong>LOCAL USE ONLY — DO NOT DEPLOY THIS FILE</strong>
+    Add local-admin.html to your .gitignore. This file must never be pushed to GitHub.
+  </div>
+</div>
+
+<div class="admin-header">
+  <div class="admin-title">ADMIN <span>VAULT</span></div>
+  <div class="admin-sub">// QUANTUM PRINTS · LOCAL RATE MANAGER · OFFLINE ONLY</div>
+</div>
+
+<div class="admin-body">
+
+  <div class="admin-sec c">3D Printing — Material Rates</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>PLA Rate (KES/gram)</label><input class="c" type="number" id="ratePLA" value="18" step="0.5"><span class="hint">Filament cost per gram</span></div>
+    <div class="admin-field"><label>PETG Rate (KES/gram)</label><input class="c" type="number" id="ratePETG" value="25" step="0.5"></div>
+    <div class="admin-field"><label>Volume Rate (KES/cm³)</label><input class="c" type="number" id="rateVolume" value="8" step="0.5"><span class="hint">Machine time overhead</span></div>
+  </div>
+
+  <div class="admin-sec c">3D Printing — Quality Multipliers</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>Draft (0.3mm) Multiplier</label><input class="c" type="number" id="multDraft" value="0.85" step="0.05"></div>
+    <div class="admin-field"><label>Standard (0.2mm)</label><input class="c" type="number" id="multStandard" value="1.00" step="0.05"></div>
+    <div class="admin-field"><label>Fine (0.1mm) Multiplier</label><input class="c" type="number" id="multFine" value="1.35" step="0.05"></div>
+  </div>
+
+  <div class="admin-sec c">3D Printing — Pricing Rules</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>Custom Colour Add-on (KES)</label><input class="c" type="number" id="addColour" value="150" step="10"></div>
+    <div class="admin-field"><label>3D Min. Order (KES)</label><input class="c" type="number" id="minOrder" value="400" step="50"></div>
+    <div class="admin-field"><label>3D Margin %</label><input class="c" type="number" id="marginPct" value="30" step="5"></div>
+  </div>
+
+  <div class="admin-sec g">PCB — Base Rates</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>Base Rate (KES/cm²)</label><input class="g" type="number" id="pcbBaseRate" value="85" step="5"><span class="hint">Per cm² board area</span></div>
+    <div class="admin-field"><label>Double Layer Multiplier</label><input class="g" type="number" id="pcbDoubleLayerMult" value="1.8" step="0.1"></div>
+    <div class="admin-field"><label>PCB Min. Order (KES)</label><input class="g" type="number" id="pcbMinOrder" value="800" step="100"></div>
+  </div>
+
+  <div class="admin-sec g">PCB — Copper &amp; Trace Surcharges</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>2oz Copper (KES)</label><input class="g" type="number" id="pcbCopperSurcharge" value="300" step="50"></div>
+    <div class="admin-field"><label>Fine Trace 0.2mm (KES)</label><input class="g" type="number" id="pcbFineTrace" value="200" step="50"></div>
+    <div class="admin-field"><label>Ultra Trace 0.1mm (KES)</label><input class="g" type="number" id="pcbUltraTrace" value="500" step="50"></div>
+  </div>
+
+  <div class="admin-sec g">PCB — Solder Mask</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>Bare Board (KES add)</label><input class="g" type="number" id="pcbMaskBare" value="0"></div>
+    <div class="admin-field"><label>Coloured Mask (KES add)</label><input class="g" type="number" id="pcbMaskColour" value="250" step="50"></div>
+    <div class="admin-field"><label>Random Mask (KES add)</label><input class="g" type="number" id="pcbMaskRandom" value="100" step="50"></div>
+  </div>
+
+  <div class="admin-sec g">PCB — Surface Finish</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>HASL Standard (KES add)</label><input class="g" type="number" id="pcbFinishHASL" value="0"></div>
+    <div class="admin-field"><label>HASL Lead-Free (KES add)</label><input class="g" type="number" id="pcbFinishLF" value="150" step="50"></div>
+    <div class="admin-field"><label>ENIG Gold (KES add)</label><input class="g" type="number" id="pcbFinishENIG" value="600" step="50"></div>
+  </div>
+
+  <div class="admin-sec g">PCB — Assembly &amp; Overhead</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>Bare Board Fee (KES)</label><input class="g" type="number" id="pcbAssemBare" value="0"><span class="hint">Fabrication only</span></div>
+    <div class="admin-field"><label>Drilling Service (KES)</label><input class="g" type="number" id="pcbAssemDrilled" value="400" step="100"></div>
+    <div class="admin-field"><label>Full Assembly (KES)</label><input class="g" type="number" id="pcbAssemFull" value="1200" step="100"><span class="hint">Labour only</span></div>
+  </div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>Tools &amp; Chemicals Per Board (KES)</label><input class="g" type="number" id="pcbOverhead" value="200" step="50"><span class="hint">Etchant, bits, consumables</span></div>
+    <div class="admin-field"><label>PCB Margin %</label><input class="g" type="number" id="pcbMargin" value="35" step="5"></div>
+    <div class="admin-field"><label>Component Sourcing Markup %</label><input class="g" type="number" id="compMarkup" value="15" step="5"></div>
+  </div>
+
+  <div class="admin-sec g">PCB — Design Service Fees</div>
+  <div class="admin-grid-2">
+    <div class="admin-field"><label>Simple Design (1–10 parts) KES</label><input class="g" type="number" id="designFeeSimple" value="1500" step="250"></div>
+    <div class="admin-field"><label>Medium Design (11–50 parts) KES</label><input class="g" type="number" id="designFeeMed" value="2500" step="250"></div>
+    <div class="admin-field"><label>Complex (51–100 parts) KES</label><input class="g" type="number" id="designFeeComplex" value="3500" step="250"></div>
+    <div class="admin-field"><label>Very Complex (100+ parts) KES</label><input class="g" type="number" id="designFeeVeryComplex" value="4500" step="250"></div>
+  </div>
+
+  <div class="admin-sec gd">Patron Codes</div>
+  <div class="admin-grid">
+    <div class="admin-field"><label>Bronze Code — 5% off</label><input class="gd" type="text" id="codeBronze" value="QPBRONZE"><span class="hint">Change periodically</span></div>
+    <div class="admin-field"><label>Silver Code — 10% off</label><input class="gd" type="text" id="codeSilver" value="QPSILVER"><span class="hint">Change periodically</span></div>
+    <div class="admin-field"><label>Gold Code — 15% off</label><input class="gd" type="text" id="codeGold" value="QPGOLD15"><span class="hint">Change periodically</span></div>
+  </div>
+
+</div>
+
+<!-- OUTPUT BLOCK -->
+<div class="output-box" id="outputBox">
+  <div style="padding:0 2rem;">
+    <div class="output-title">✦ Generated Code — Paste this into index.html</div>
+    <div class="output-code" id="outputCode"></div>
+    <div class="output-instructions">
+      <strong>How to apply these rates</strong>
+      <ol>
+        <li>Click <strong>Copy to Clipboard</strong> above.</li>
+        <li>Open <code>index.html</code> in your editor.</li>
+        <li>Find the block that starts with <code>// ── 3D Printing Rates</code> (search for it).</li>
+        <li>Select from that line down to and including the <code>var _CODE_GOLD=...</code> line.</li>
+        <li>Paste to replace the selected block.</li>
+        <li>Save and push to GitHub — the live site updates automatically.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY GENERATE BAR -->
+<div class="gen-bar">
+  <button class="btn-gen" onclick="generateCode()">✦ Generate Code Block</button>
+  <button class="btn-copy" id="copyBtn" onclick="copyCode()" style="display:none">Copy to Clipboard</button>
+  <span class="gen-status" id="genStatus">Copied!</span>
+</div>
+
+<script>
+function v(id){ return document.getElementById(id).value; }
+
+function generateCode(){
+  var now = new Date();
+  var ts = now.toISOString().replace('T',' ').slice(0,19);
+
+  var code =
+'// ── 3D Printing Rates ──────────────────────────────────────────\n'+
+'var _RATE_PLA='+v('ratePLA')+',_RATE_PETG='+v('ratePETG')+',_RATE_VOL='+v('rateVolume')+';\n'+
+'var _MULT_DRAFT='+v('multDraft')+',_MULT_STD='+v('multStandard')+',_MULT_FINE='+v('multFine')+';\n'+
+'var _ADD_COLOUR='+v('addColour')+',_MIN_ORDER_3D='+v('minOrder')+',_MARGIN_3D='+v('marginPct')+';\n'+
+'\n'+
+'// ── PCB Rates ──────────────────────────────────────────────────\n'+
+'var _PCB_BASE='+v('pcbBaseRate')+',_PCB_DBL='+v('pcbDoubleLayerMult')+',_PCB_MIN='+v('pcbMinOrder')+';\n'+
+'var _PCB_CU='+v('pcbCopperSurcharge')+',_PCB_FT='+v('pcbFineTrace')+',_PCB_UT='+v('pcbUltraTrace')+';\n'+
+'var _PCB_MASK_BARE='+v('pcbMaskBare')+',_PCB_MASK_COL='+v('pcbMaskColour')+',_PCB_MASK_RAND='+v('pcbMaskRandom')+';\n'+
+'var _PCB_FIN_HASL='+v('pcbFinishHASL')+',_PCB_FIN_LF='+v('pcbFinishLF')+',_PCB_FIN_ENIG='+v('pcbFinishENIG')+';\n'+
+'var _PCB_ASSEM_BARE='+v('pcbAssemBare')+',_PCB_ASSEM_DRILL='+v('pcbAssemDrilled')+',_PCB_ASSEM_FULL='+v('pcbAssemFull')+';\n'+
+'var _PCB_OH='+v('pcbOverhead')+',_PCB_MARGIN='+v('pcbMargin')+',_COMP_MARKUP='+v('compMarkup')+';\n'+
+'\n'+
+'// ── Design Fees ────────────────────────────────────────────────\n'+
+'var _FEE_SIMPLE='+v('designFeeSimple')+',_FEE_MED='+v('designFeeMed')+',_FEE_COMPLEX='+v('designFeeComplex')+',_FEE_VCOMPLEX='+v('designFeeVeryComplex')+';\n'+
+'\n'+
+'// ── Patron Discount Codes (change these periodically) ──────────\n'+
+'// These are visible in source — rotate them regularly.\n'+
+'// Last updated: '+ts+'\n'+
+'var _CODE_BRONZE="'+v('codeBronze').toUpperCase().trim()+'",_CODE_SILVER="'+v('codeSilver').toUpperCase().trim()+'",_CODE_GOLD="'+v('codeGold').toUpperCase().trim()+'";';
+
+  document.getElementById('outputCode').textContent = code;
+  document.getElementById('outputBox').classList.add('show');
+  document.getElementById('copyBtn').style.display = 'inline-block';
+  document.getElementById('outputBox').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function copyCode(){
+  var text = document.getElementById('outputCode').textContent;
+  navigator.clipboard.writeText(text).then(function(){
+    var s = document.getElementById('genStatus');
+    s.classList.add('show');
+    setTimeout(function(){ s.classList.remove('show'); }, 2200);
+  });
+}
+</script>
+</body>
+</html>
