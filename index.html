@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Quantum Prints — 3D Printing & PCB Manufacturing | Nairobi</title>
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIAAKAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAANFJREFUeJylk0EOgjAQRd80hkROwTG4gJ6GpUY3LJSNJiw5DV6AY3iOalIXUhlrm6C+FenM//lMZmS5zB0jl3PhP1nvr2j601Rb7aaaeAMtnoM3MV+pIvxsIKIMUvEHWzHYKlrrTwUisEgJAep683prmhaAMuvek+R57vSEB1txPGy53R0hTdN+GBgt9sTEYaKXQbTzC/43CDcOpoHNeTcu+N0y6yiz7qM5NkAYV1nkfdc1g62iQnjeiwEIU4SJUjinhqgvbA6+X/Q5Q/qkU+f8AHnyTFfd5iL6AAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB8UlEQVR4nMVXv0vDQBh9CRVpB8eCIFYdRHAp4uLgInbp4lY3nR1EKZVCCy0GKkhFEEQnFweHjA4ddCs6+RdIFdNBRBFchFY6xEEupvHuy50pyYPS/Li7733v+3E5LR5P2IgQepTGASDmN+B6f8K5zhQtqUVV5mhUCNwLBQFFIpQQUI5EngNCAoOS32893yRkyO29KRk0S0mpcVwFvGxFxvMFA/mCwX3Hm8NTQVoBr2EAMHZ3AACVah0AcHhQUV7rTxn6eZ8vGI5hL3hEeKFwl6U0Aa/XFLxEKBJ9IaCMuw03aimu4Wy57ZBkJPwQqA9kipbzo0AlZMz7gJrEMDq/icf3BM5OPjCXnkXrwcJrr4dG7dhRQRY6zziFRi2FT30cK6sbmJmeQrf7hdzaFiZTY6QSIhX+FQLbtp3/eHwY5vkRmrd3DkEVKPeBbLmN5tXvfafzo4D7vQp0gL9dUq10RH/BpXmK+9ZT33MqlKJS1N03skgvbyPZu4HVfsbCUs4xLvKecoYMgVlKCqthcf0CADAU0wCoS88cHngnVOmCgEQSMhXYgswAj0ilWlfekLjfhDJNya2IaDf0816agIgEI8LzWpR4UgREJIKCV2mhfZSKylxIQKUvBEEoClDOkCcjgH/M0jTxeNse4NEsDER+MvoGuirmouW7vRQAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB8UlEQVR4nMVXv0vDQBh9CRVpB8eCIFYdRHAp4uLgInbp4lY3nR1EKZVCCy0GKkhFEEQnFweHjA4ddCs6+RdIFdNBRBFchFY6xEEupvHuy50pyYPS/Li7733v+3E5LR5P2IgQepTGASDmN+B6f8K5zhQtqUVV5mhUCNwLBQFFIpQQUI5EngNCAoOS32893yRkyO29KRk0S0mpcVwFvGxFxvMFA/mCwX3Hm8NTQVoBr2EAMHZ3AACVah0AcHhQUV7rTxn6eZ8vGI5hL3hEeKFwl6U0Aa/XFLxEKBJ9IaCMuw03aimu4Wy57ZBkJPwQqA9kipbzo0AlZMz7gJrEMDq/icf3BM5OPjCXnkXrwcJrr4dG7dhRQRY6zziFRi2FT30cK6sbmJmeQrf7hdzaFiZTY6QSIhX+FQLbtp3/eHwY5vkRmrd3DkEVKPeBbLmN5tXvfafzo4D7vQp0gL9dUq10RH/BpXmK+9ZT33MqlKJS1N03skgvbyPZu4HVfsbCUs4xLvKecoYMgVlKCqthcf0CADAU0wCoS88cHngnVOmCgEQSMhXYgswAj0ilWlfekLjfhDJNya2IaDf0816agIgEI8LzWpR4UgREJIKCV2mhfZSKylxIQKUvBEEoClDOkCcjgH/M0jTxeNse4NEsDER+MvoGuirmouW7vRQAAAAASUVORK5CYII=">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><style>:root{--display:Georgia,serif;--mono:monospace;}</style></noscript>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+  --bg:#090909;--bg2:#101010;--bg3:#181614;--surface:#1e1c18;
+  --border:#2e2820;--border2:#3e3828;
+  --gold:#c4922a;--gold2:#d4a84a;--gold3:#e8c060;
+  --gold-glow:rgba(196,146,42,0.13);
+  --silver:#8c8c96;--silver-dim:rgba(140,140,150,0.09);
+  --green:#5a8a3a;--green-dim:rgba(90,138,58,0.12);
+  --text:#e8e0d0;--text2:#9a8e78;--text3:#5a5248;
+  --white:#f4ede0;--success:#5a8a3a;
+  --mono:"JetBrains Mono",monospace;
+  --display:"Cinzel",serif;
+  --body:"Inter",sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:72px;}
+body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg2);}::-webkit-scrollbar-thumb{background:var(--border2);}::-webkit-scrollbar-thumb:hover{background:var(--gold);}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(45deg,rgba(196,146,42,0.022) 1px,transparent 1px),linear-gradient(-45deg,rgba(196,146,42,0.022) 1px,transparent 1px);background-size:22px 22px;}
+section,header,footer,#topnav{position:relative;z-index:1;}
+
+/* FORCE FIXED POSITION on nav elements */
+#floatNav,#mobileNav{position:fixed!important;}
+/* FLOAT NAV */
+#floatNav{position:fixed;right:1rem;top:50%;transform:translateY(-50%);z-index:150;display:flex;flex-direction:column;gap:4px;background:rgba(14,13,11,0.96);border:1px solid var(--border2);border-left:2px solid var(--gold);padding:10px 7px;backdrop-filter:blur(12px);box-shadow:0 8px 40px rgba(0,0,0,0.7);}
+.fn-item{display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;padding:7px 8px;transition:all 0.2s;position:relative;text-decoration:none;color:var(--text3);min-width:46px;border-left:2px solid transparent;margin-left:-9px;padding-left:7px;}
+.fn-item:hover,.fn-item.active{color:var(--gold);background:var(--gold-glow);border-left-color:var(--gold);transition:all 0.15s ease;}
+.fn-item.g-nav:hover,.fn-item.g-nav.active{color:var(--green);background:var(--green-dim);border-left-color:var(--green);}
+.fn-icon{font-size:13px;line-height:1;}.fn-label{font-family:var(--mono);font-size:0.46rem;letter-spacing:1px;text-transform:uppercase;text-align:center;white-space:nowrap;}
+.fn-divider{height:1px;background:var(--border);margin:3px 0;width:100%;}
+.fn-tip{position:absolute;right:calc(100% + 12px);top:50%;transform:translateY(-50%);background:var(--surface);border:1px solid var(--border2);border-right:2px solid var(--gold);padding:4px 10px;font-family:var(--mono);font-size:0.6rem;color:var(--text);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.15s;letter-spacing:1px;box-shadow:0 4px 16px rgba(0,0,0,0.5);}
+.fn-item:hover .fn-tip{opacity:1;}
+
+/* MOBILE NAV */
+#mobileNav{position:fixed;bottom:0;left:0;right:0;z-index:150;background:rgba(9,9,10,0.97);border-top:2px solid var(--gold);backdrop-filter:blur(16px);display:flex;overflow-x:auto;padding:0 4px;scrollbar-width:none;}
+#mobileNav::-webkit-scrollbar{display:none;}
+.mn-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:9px 10px 7px;cursor:pointer;flex-shrink:0;transition:all 0.2s;color:var(--text3);text-decoration:none;border-top:2px solid transparent;min-width:54px;margin-top:-2px;}
+.mn-item.active,.mn-item:hover{color:var(--gold);border-top-color:var(--gold);}
+.mn-item.g-mn.active,.mn-item.g-mn:hover{color:var(--green);border-top-color:var(--green);}
+.mn-icon{font-size:15px;line-height:1;}.mn-label{font-family:var(--mono);font-size:0.43rem;letter-spacing:0.8px;text-transform:uppercase;}
+@media(max-width:768px){#floatNav{display:none;}body{padding-bottom:62px;}}
+@media(min-width:769px){#mobileNav{display:none!important;}}
+
+/* TOP NAV */
+#topnav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 3.5rem;height:64px;background:rgba(9,9,10,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border2);}
+#topnav::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.35;}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.nav-logo-img{height:40px;width:40px;object-fit:contain;}
+.nav-logo-text{font-family:var(--display);font-size:17px;letter-spacing:4px;color:var(--white);font-weight:700;}
+.nav-logo-text span{color:var(--gold);}
+.nav-right{display:flex;align-items:center;gap:1.4rem;}
+.nav-right a{text-decoration:none;color:var(--text2);font-size:0.7rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:color 0.2s;font-family:var(--mono);white-space:nowrap;}
+.nav-right a:hover{color:var(--gold);}
+.nav-cta{color:var(--gold)!important;padding:7px 16px;border:1px solid var(--gold)!important;transition:all 0.2s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--bg)!important;}
+
+/* SHARED */
+section{padding:80px 4rem;}
+.sec-tag{font-family:var(--mono);font-size:0.64rem;color:var(--gold);letter-spacing:4px;text-transform:uppercase;margin-bottom:0.7rem;display:flex;align-items:center;gap:10px;}
+.sec-tag::before{content:"";width:22px;height:1px;background:var(--gold);}
+.sec-tag.grn{color:var(--green);}.sec-tag.grn::before{background:var(--green);}
+h2{font-family:var(--display);font-size:clamp(26px,3.4vw,50px);letter-spacing:3px;color:var(--white);line-height:1.05;margin-bottom:1rem;font-weight:900;}
+.sec-rule{display:flex;align-items:center;gap:12px;margin-bottom:2.5rem;}
+.sec-rule-line{flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent);}
+.sec-rule-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;}
+.section-desc{font-size:0.91rem;color:var(--text2);max-width:500px;line-height:1.85;margin-bottom:2.8rem;}
+.form-label{font-family:var(--mono);font-size:0.64rem;color:var(--text2);letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:0.4rem;}
+.form-input,.form-select{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:11px 14px;font-size:0.86rem;font-family:var(--body);outline:none;transition:border-color 0.2s;width:100%;}
+.form-input:focus,.form-select:focus{border-color:var(--gold);}
+.form-select{appearance:none;-webkit-appearance:none;-moz-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a5248' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px;background-color:var(--bg3);cursor:pointer;color:var(--text);}
+.form-group{display:flex;flex-direction:column;margin-bottom:1.1rem;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;}
+.field-hint{font-size:0.67rem;color:var(--text3);font-style:italic;margin-top:3px;}
+.textarea-input{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:11px 14px;width:100%;min-height:90px;font-size:0.86rem;font-family:var(--body);resize:vertical;outline:none;transition:border-color 0.2s;display:block;}
+.textarea-input:focus{border-color:var(--gold);}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;font-size:0.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none;font-family:var(--mono);}
+.btn-gold{background:var(--gold);color:var(--bg);}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-1px);box-shadow:0 6px 20px rgba(196,146,42,0.28);}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold);}
+.btn-outline:hover{background:var(--gold);color:var(--bg);}
+.btn-silver{background:transparent;color:var(--silver);border:1px solid var(--silver);}
+.btn-silver:hover{background:var(--silver);color:var(--bg);}
+
+/* MARQUEE */
+.marquee-bar{background:var(--surface);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:12px 0;overflow:hidden;}
+.marquee-track{display:flex;gap:3rem;animation:marquee 32s linear infinite;white-space:nowrap;width:max-content;}
+.marquee-item{font-family:var(--mono);font-size:0.63rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:12px;}
+.marquee-item::after{content:"⚔";color:var(--gold);font-size:0.52rem;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 4rem 60px;}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(196,146,42,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(196,146,42,0.04) 1px,transparent 1px);background-size:80px 80px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%);}
+.hero-glow{position:absolute;top:15%;left:52%;width:700px;height:700px;background:radial-gradient(circle,rgba(196,146,42,0.08) 0%,transparent 65%);pointer-events:none;}
+.hero-content{position:relative;max-width:680px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:0.67rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:1.5rem;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:"⚔";font-size:0.52rem;opacity:0.7;}
+h1{font-family:var(--display);font-size:clamp(46px,6.2vw,94px);line-height:0.95;letter-spacing:4px;color:var(--white);margin-bottom:1.5rem;font-weight:900;}
+h1 .line2{display:block;color:var(--gold);font-size:0.72em;letter-spacing:6px;}
+.hero-desc{font-size:0.97rem;color:var(--text2);max-width:480px;line-height:1.9;margin-bottom:2.5rem;}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;flex-wrap:wrap;border-top:1px solid var(--border2);position:relative;}
+.hero-stats::before{content:"";position:absolute;top:0;left:0;width:60px;height:1px;background:var(--gold);}
+.stat-val{font-family:var(--display);font-size:1.9rem;color:var(--white);letter-spacing:2px;font-weight:700;}
+.stat-val span{color:var(--gold);}
+.stat-lbl{font-size:0.67rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-top:2px;font-family:var(--mono);}
+.hero-right{position:absolute;right:4.5rem;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;}
+.hero-badge{background:var(--surface);border:1px solid var(--border2);border-left:2px solid var(--gold);padding:12px 18px;min-width:200px;font-family:var(--mono);font-size:0.67rem;color:var(--text2);line-height:1.7;}
+.hero-badge strong{color:var(--gold);display:block;font-size:0.57rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+
+/* SERVICES */
+#services{background:var(--bg2);}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border2);border:1px solid var(--border2);margin-top:2.5rem;}
+.service-card{background:var(--bg2);padding:2.2rem;transition:background 0.25s;position:relative;overflow:hidden;}
+.service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transition:transform 0.3s;transform-origin:left;}
+.service-card:hover{background:var(--surface);}.service-card:hover::before{transform:scaleX(1);}
+.service-icon{font-size:20px;margin-bottom:0.9rem;}
+.service-num{font-family:var(--mono);font-size:0.57rem;color:var(--text3);letter-spacing:3px;margin-bottom:0.4rem;}
+.service-card h3{font-family:var(--display);font-size:0.9rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;letter-spacing:2px;}
+.service-card p{font-size:0.8rem;color:var(--text2);line-height:1.75;}
+
+/* UPLOAD */
+.upload-zone{border:1px dashed var(--border2);padding:2rem;text-align:center;cursor:pointer;transition:all 0.3s;position:relative;overflow:hidden;background:var(--bg3);}
+.upload-zone:hover,.upload-zone.dragover{border-color:var(--gold);background:var(--gold-glow);}
+.upload-zone.pcb-zone:hover,.upload-zone.pcb-zone.dragover{border-color:var(--green);background:var(--green-dim);}
+.upload-icon{font-size:2.1rem;margin-bottom:0.7rem;display:block;}
+.upload-zone h3{font-family:var(--display);font-size:0.8rem;font-weight:700;color:var(--white);margin-bottom:0.3rem;letter-spacing:2px;}
+.upload-zone p{font-size:0.73rem;color:var(--text3);line-height:1.6;}
+.upload-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;z-index:2;}
+.stl-status,.pcb-file-status{margin-top:0.8rem;padding:0.9rem 1.1rem;background:var(--surface);border:1px solid var(--border2);border-left:2px solid var(--gold);font-family:var(--mono);font-size:0.71rem;display:none;transition:all 0.2s;}
+.stl-status.show,.pcb-file-status.show{display:block;}
+.stl-row,.pcb-file-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--border);}
+.stl-row:last-child,.pcb-file-row:last-child{border-bottom:none;}
+.stl-label,.pcb-file-key{color:var(--text3);font-size:0.59rem;letter-spacing:1px;text-transform:uppercase;}
+.stl-val{color:var(--gold2);}.pcb-file-val{color:var(--green);}
+.stl-parse-msg{font-size:0.66rem;margin-top:0.5rem;color:var(--text2);font-style:italic;}
+.stl-spinner{display:inline-block;width:11px;height:11px;border:2px solid var(--border2);border-top-color:var(--gold);border-radius:50%;animation:spin 0.7s linear infinite;vertical-align:middle;margin-right:5px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* PRICE */
+.calc-layout,.pcb-layout,.ai-layout,.contact-layout,.patron-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2rem;}
+.infill-slider{margin-bottom:0.2rem;}.infill-slider input[type=range]{width:100%;accent-color:var(--gold);height:3px;cursor:pointer;margin-top:6px;}
+.infill-labels{display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.58rem;color:var(--text3);margin-top:4px;}
+.price-result{background:var(--surface);border:1px solid var(--border2);border-top:2px solid var(--gold);padding:1.8rem;}
+.price-result.pcb-res{border-top-color:var(--green);}
+.price-result-title{font-family:var(--mono);font-size:0.61rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:8px;}
+.price-result-title::before{content:"✦";font-size:0.65rem;color:var(--gold);}
+.price-breakdown{list-style:none;margin-bottom:1.2rem;}
+.price-breakdown li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--border);font-size:0.79rem;color:var(--text2);}
+.price-breakdown li:last-child{border-bottom:none;}
+.price-breakdown .val{font-family:var(--mono);color:var(--text);font-size:0.73rem;text-align:right;max-width:55%;}
+.price-total{display:flex;justify-content:space-between;align-items:center;padding-top:1rem;border-top:1px solid var(--border2);}
+.price-total-label{font-size:0.79rem;font-weight:600;color:var(--text2);font-family:var(--mono);}
+.price-total-val{font-family:var(--display);font-size:2.2rem;color:var(--gold);letter-spacing:2px;font-weight:900;}
+.price-total-val.gv{color:var(--green);}
+.patron-disc-row{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;background:rgba(196,146,42,0.07);border:1px solid rgba(196,146,42,0.2);margin-top:0.7rem;font-size:0.78rem;}
+.patron-disc-row .dl{color:var(--gold2);}.patron-disc-row .dv{font-family:var(--mono);color:var(--gold2);font-size:0.72rem;}
+.price-note{font-size:0.67rem;color:var(--text3);margin-top:0.8rem;font-style:italic;line-height:1.6;}
+.btn-quote{width:100%;margin-top:1.1rem;padding:13px;background:var(--gold);color:var(--bg);border:none;font-family:var(--mono);font-size:0.79rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;}
+.btn-quote:hover{background:var(--gold2);}
+.btn-quote.gq{background:var(--green);}.btn-quote.gq:hover{background:#4a7a2a;}
+.comp-note{background:rgba(196,146,42,0.05);border:1px solid rgba(196,146,42,0.18);border-left:2px solid var(--gold);padding:0.8rem 1rem;margin-top:0.8rem;font-size:0.77rem;color:var(--text2);line-height:1.6;}
+.comp-note strong{color:var(--gold2);}
+
+/* PCB */
+#pcb{background:var(--bg2);}
+.pcb-tab-bar{display:flex;margin-bottom:1.3rem;border:1px solid var(--border2);}
+.pcb-tab{flex:1;padding:11px;text-align:center;cursor:pointer;font-family:var(--mono);font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);background:var(--bg3);border:none;transition:all 0.2s;border-right:1px solid var(--border2);}
+.pcb-tab:last-child{border-right:none;}
+.pcb-tab.active{background:var(--green);color:var(--bg);font-weight:700;}
+.pcb-tab:hover:not(.active){color:var(--green);background:var(--green-dim);}
+.pcb-panel{display:none;}.pcb-panel.active{display:block;}
+.design-note{background:var(--green-dim);border:1px solid rgba(90,138,58,0.25);border-left:2px solid var(--green);padding:0.9rem 1rem;margin-bottom:1rem;font-size:0.78rem;color:var(--text2);line-height:1.6;}
+.design-note strong{color:var(--green);}
+
+/* MATERIALS */
+#materials{background:var(--bg);}
+.materials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem;}
+.material-card{background:var(--bg3);border:1px solid var(--border2);padding:2rem;transition:all 0.25s;}
+.material-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,0.5),0 0 20px rgba(196,146,42,0.07);}
+.mat-badge{display:inline-block;padding:3px 10px;margin-bottom:1rem;font-family:var(--mono);font-size:0.58rem;letter-spacing:1.5px;text-transform:uppercase;}
+.mat-badge.pop{background:rgba(196,146,42,0.1);color:var(--gold);border:1px solid rgba(196,146,42,0.25);}
+.mat-badge.dur{background:rgba(140,140,150,0.08);color:var(--silver);border:1px solid rgba(140,140,150,0.2);}
+.material-card h3{font-family:var(--display);font-size:1.4rem;font-weight:900;color:var(--white);margin-bottom:0.3rem;letter-spacing:3px;}
+.mat-sub{font-family:var(--mono);font-size:0.6rem;color:var(--text3);letter-spacing:1px;margin-bottom:1.1rem;}
+.mat-props{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:0.8rem;}
+.mat-prop{font-size:0.76rem;color:var(--text2);}
+.mat-prop strong{display:block;font-family:var(--mono);font-size:0.56rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+.mat-bar{height:2px;background:var(--border2);margin:0.8rem 0;}
+.mat-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));}
+.mat-bar-fill.sv{background:linear-gradient(90deg,var(--silver),#b0b0ba);}
+.mat-desc{font-size:0.79rem;color:var(--text2);line-height:1.75;}
+.mat-coming{margin-top:2rem;padding:1.4rem 2rem;background:var(--surface);border:1px solid var(--border2);border-left:2px solid var(--gold);}
+.mat-coming-tag{font-family:var(--mono);font-size:0.6rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.5rem;}
+.mat-coming p{font-size:0.84rem;color:var(--text2);line-height:1.7;}
+
+/* PROCESS */
+#how-it-works{background:var(--bg2);}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:2.5rem;position:relative;}
+.process-steps::before{content:"";position:absolute;top:30px;left:calc(12.5% + 14px);right:calc(12.5% + 14px);height:1px;background:linear-gradient(90deg,transparent,var(--border2),var(--border2),transparent);z-index:0;}
+.process-step{padding:0 1rem;text-align:center;position:relative;}
+.step-num{width:60px;height:60px;background:var(--bg3);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.2rem;color:var(--text3);margin:0 auto 1.3rem;position:relative;z-index:1;transition:all 0.3s;font-weight:700;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);}
+.process-step:hover .step-num{background:var(--gold);color:var(--bg);box-shadow:0 0 24px rgba(196,146,42,0.3);}
+.process-step h3{font-family:var(--display);font-size:0.83rem;font-weight:700;color:var(--white);margin-bottom:0.5rem;letter-spacing:2px;}
+.process-step p{font-size:0.76rem;color:var(--text2);line-height:1.75;}
+.step-icon{font-size:1.2rem;margin-bottom:0.5rem;}
+
+/* PATRON */
+#patron{background:var(--bg);position:relative;overflow:hidden;}
+.patron-glow{position:absolute;top:-50px;right:-50px;width:500px;height:500px;background:radial-gradient(circle,rgba(196,146,42,0.05) 0%,transparent 70%);pointer-events:none;}
+.patron-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:0.65rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:1.1rem;}
+.patron-eyebrow::before{content:"⚔";font-size:0.62rem;}
+.patron-desc{font-size:0.89rem;color:var(--text2);line-height:1.85;margin-bottom:1.8rem;}
+.patron-perks{list-style:none;display:flex;flex-direction:column;gap:0.85rem;margin-bottom:2rem;}
+.patron-perks li{display:flex;gap:1rem;align-items:flex-start;font-size:0.83rem;color:var(--text2);line-height:1.65;}
+.perk-icon{width:28px;height:28px;flex-shrink:0;background:var(--gold-glow);border:1px solid rgba(196,146,42,0.2);display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:1px;}
+.patron-perks strong{color:var(--text);}
+.patron-card{background:var(--surface);border:1px solid var(--border2);border-top:2px solid var(--gold);padding:1.8rem;}
+.patron-card-title{font-family:var(--mono);font-size:0.59rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.3rem;}
+.patron-tier{background:var(--bg3);border:1px solid var(--border2);padding:1.1rem 1.3rem;margin-bottom:0.8rem;cursor:pointer;transition:all 0.2s;position:relative;}
+.patron-tier:hover,.patron-tier.selected{border-color:var(--gold);}
+.patron-tier.selected{background:rgba(196,146,42,0.04);}
+.patron-tier.selected::before{content:"✦";position:absolute;top:0.9rem;right:1rem;color:var(--gold);font-size:0.72rem;}
+.pt-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;}
+.pt-name{font-family:var(--display);font-weight:700;color:var(--white);font-size:0.83rem;letter-spacing:2px;}
+.pt-price{font-family:var(--display);font-size:1.3rem;color:var(--gold);letter-spacing:1px;font-weight:900;}
+.pt-price span{font-family:var(--body);font-size:0.66rem;color:var(--text3);}
+.pt-perks-list{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.pt-perks-list li{font-size:0.7rem;color:var(--text2);display:flex;align-items:flex-start;gap:6px;}
+.pt-perks-list li::before{content:"✦";color:var(--gold);font-size:0.53rem;flex-shrink:0;margin-top:2px;}
+.pt-badge{display:inline-block;padding:2px 7px;background:rgba(196,146,42,0.1);color:var(--gold);border:1px solid rgba(196,146,42,0.2);font-family:var(--mono);font-size:0.53rem;letter-spacing:1px;margin-top:5px;}
+.patron-form{display:flex;flex-direction:column;gap:0.82rem;margin-top:1.3rem;}
+.patron-form input{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:11px 14px;font-size:0.86rem;font-family:var(--body);outline:none;transition:border-color 0.2s;}
+.patron-form input:focus{border-color:var(--gold);}
+.btn-patron{background:var(--gold);color:var(--bg);padding:13px;border:none;font-size:0.79rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;font-family:var(--mono);width:100%;}
+.btn-patron:hover{background:var(--gold2);}
+.patron-note{font-size:0.67rem;color:var(--text3);text-align:center;line-height:1.6;}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--bg2);}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem;}
+.testimonial-card{background:var(--bg3);border:1px solid var(--border2);padding:1.8rem;position:relative;transition:border-color 0.25s;}
+.testimonial-card:hover{border-color:var(--gold);}
+.testimonial-card::before{content:'"';position:absolute;top:0.8rem;right:1.2rem;font-family:var(--display);font-size:4.5rem;color:var(--gold);opacity:0.07;line-height:1;}
+.stars{color:var(--gold);font-size:0.78rem;margin-bottom:0.9rem;letter-spacing:3px;}
+.testimonial-card p{font-size:0.81rem;color:var(--text2);line-height:1.8;margin-bottom:1.3rem;}
+.testimonial-author{display:flex;align-items:center;gap:11px;}
+.author-avatar{width:38px;height:38px;background:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg);font-size:0.83rem;flex-shrink:0;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);}
+.author-name{font-family:var(--display);font-weight:700;font-size:0.8rem;color:var(--white);letter-spacing:1px;}
+.author-role{font-size:0.68rem;color:var(--text3);margin-top:1px;}
+
+/* AI */
+#ai-assistant{background:var(--bg);position:relative;overflow:hidden;}
+.ai-bg{position:absolute;inset:0;background-image:radial-gradient(circle at 10% 50%,rgba(140,140,150,0.03) 0%,transparent 50%),radial-gradient(circle at 90% 20%,rgba(140,140,150,0.03) 0%,transparent 50%);pointer-events:none;}
+.ai-glow{position:absolute;top:-80px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(140,140,150,0.04) 0%,transparent 70%);pointer-events:none;}
+.ai-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:0.66rem;color:var(--silver);letter-spacing:3px;text-transform:uppercase;margin-bottom:1.1rem;}
+.ai-eyebrow::before{content:"";width:22px;height:1px;background:var(--silver);}
+.ai-h2 span{color:var(--silver);}
+.ai-desc{font-size:0.89rem;color:var(--text2);line-height:1.85;margin-bottom:1.8rem;}
+.ai-features{list-style:none;display:flex;flex-direction:column;gap:0.9rem;margin-bottom:2.2rem;}
+.ai-features li{display:flex;gap:1rem;align-items:flex-start;font-size:0.82rem;color:var(--text2);line-height:1.65;}
+.ai-feat-icon{width:28px;height:28px;flex-shrink:0;background:var(--silver-dim);border:1px solid rgba(140,140,150,0.18);display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:1px;}
+.ai-features strong{color:var(--text);}
+.ai-card{background:var(--surface);border:1px solid var(--border2);border-top:2px solid var(--silver);padding:1.8rem;}
+.ai-card-title{font-family:var(--mono);font-size:0.59rem;color:var(--text3);letter-spacing:2px;text-transform:uppercase;margin-bottom:1.2rem;}
+.ai-stat-bar{display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.2rem;}
+.ai-stat-row{display:flex;justify-content:space-between;padding:8px 11px;background:var(--bg3);border:1px solid var(--border);font-family:var(--mono);font-size:0.66rem;}
+.ai-stat-row .ak{color:var(--text3);letter-spacing:1px;text-transform:uppercase;}.ai-stat-row .av{color:var(--silver);}
+.ai-wl-form{display:flex;flex-direction:column;gap:0.8rem;}
+.ai-wl-form input,.ai-wl-form select{background:var(--bg3);border:1px solid var(--border2);color:var(--text);padding:11px 14px;font-size:0.85rem;font-family:var(--body);outline:none;transition:border-color 0.2s;width:100%;appearance:none;}
+.ai-wl-form input:focus,.ai-wl-form select:focus{border-color:var(--silver);}
+.btn-wl{background:var(--silver);color:var(--bg);padding:13px;border:none;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;font-family:var(--mono);width:100%;}
+.btn-wl:hover{background:#a0a0aa;}
+.wl-note{font-size:0.67rem;color:var(--text3);text-align:center;line-height:1.6;}
+
+/* CONTACT */
+#contact{background:var(--bg2);}
+.contact-info p{font-size:0.89rem;color:var(--text2);line-height:1.85;margin-bottom:1.8rem;margin-top:0.7rem;}
+.contact-methods{display:flex;flex-direction:column;gap:0.9rem;}
+.contact-method{display:flex;align-items:center;gap:1rem;padding:1.1rem;background:var(--surface);border:1px solid var(--border2);text-decoration:none;transition:border-color 0.2s;color:var(--text);}
+.contact-method:hover{border-color:var(--gold);}
+.contact-method-icon{width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;background:var(--gold-glow);border:1px solid rgba(196,146,42,0.18);}
+.contact-method-icon.wa{background:rgba(90,138,58,0.1);border-color:rgba(90,138,58,0.2);}
+.contact-method-label{font-size:0.62rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;font-family:var(--mono);}
+.contact-method-val{font-size:0.85rem;font-weight:600;color:var(--white);margin-top:1px;}
+.contact-form-box{background:var(--bg3);border:1px solid var(--border2);padding:2.2rem;}
+.contact-form-box h3{font-family:var(--display);font-size:0.9rem;font-weight:700;color:var(--white);margin-bottom:1.3rem;letter-spacing:2px;}
+.btn-send{width:100%;background:var(--gold);color:var(--bg);border:none;padding:13px;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.2s;font-family:var(--mono);}
+.btn-send:hover{background:var(--gold2);}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border2);padding:2.5rem 4rem 1.5rem;position:relative;}
+footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.3;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem;}
+.footer-brand p{font-size:0.79rem;color:var(--text3);line-height:1.75;margin-top:0.8rem;max-width:250px;}
+.footer-logo-text{font-family:var(--display);font-size:15px;letter-spacing:4px;color:var(--white);font-weight:700;display:block;margin-bottom:3px;}
+.footer-logo-text span{color:var(--gold);}
+.footer-col h4{font-family:var(--mono);font-size:0.58rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:0.9rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.55rem;}
+.footer-col ul li a{text-decoration:none;color:var(--text2);font-size:0.79rem;transition:color 0.2s;}
+.footer-col ul li a:hover{color:var(--gold);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;border-top:1px solid var(--border);font-size:0.69rem;color:var(--text3);cursor:pointer;user-select:none;font-family:var(--mono);}
+.footer-bottom .acc{color:var(--gold);}
+
+/* EXTRAS */
+.wa-float{position:fixed;bottom:2rem;right:5rem;z-index:200;width:50px;height:50px;background:#25d366;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:22px;box-shadow:0 4px 20px rgba(37,211,102,0.35);transition:all 0.2s;animation:wapulse 3s infinite;clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);}
+.wa-float:hover{transform:scale(1.1);}
+@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.3);}50%{box-shadow:0 4px 28px rgba(37,211,102,0.55);}}
+@media(max-width:768px){.wa-float{bottom:74px;right:1rem;}}
+.toast{position:fixed;bottom:5rem;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--border2);border-left:2px solid var(--gold);padding:10px 24px;font-size:0.78rem;color:var(--gold2);font-family:var(--mono);opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:300;white-space:nowrap;}
+.toast.show{opacity:1;}
+
+/* ATTACH MODAL */
+#attachModal{display:none;position:fixed;inset:0;z-index:400;background:rgba(0,0,0,0.9);backdrop-filter:blur(8px);align-items:center;justify-content:center;}
+#attachModal.open{display:flex;}
+.attach-box{background:var(--bg2);border:1px solid var(--border2);border-top:2px solid var(--gold);padding:2.2rem;max-width:460px;width:90%;text-align:center;}
+.attach-icon{font-size:2.5rem;margin-bottom:0.8rem;display:block;}
+.attach-title{font-family:var(--display);font-size:1.5rem;letter-spacing:3px;color:var(--white);margin-bottom:0.7rem;font-weight:900;}
+.attach-desc{font-size:0.82rem;color:var(--text2);line-height:1.75;margin-bottom:1.1rem;}
+.attach-fname{font-family:var(--mono);font-size:0.75rem;color:var(--gold2);background:var(--surface);padding:7px 14px;display:inline-block;margin-bottom:1.1rem;border:1px solid var(--border2);}
+.attach-steps{list-style:none;text-align:left;margin-bottom:1.3rem;}
+.attach-steps li{font-size:0.78rem;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start;}
+.attach-steps li::before{content:attr(data-n);color:var(--gold);font-family:var(--mono);font-size:0.67rem;flex-shrink:0;}
+.btn-got-it{background:var(--gold);color:var(--bg);border:none;padding:12px;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-family:var(--mono);width:100%;}
+.btn-got-it:hover{background:var(--gold2);}
+
+/* ADMIN */
+#adminOverlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.95);backdrop-filter:blur(10px);align-items:flex-start;justify-content:center;overflow-y:auto;padding:2rem 1rem;}
+#adminOverlay.open{display:flex;}
+.admin-modal{background:var(--bg2);border:1px solid var(--border2);border-top:2px solid var(--silver);width:min(920px,96vw);padding:2.2rem;margin:auto;}
+.admin-modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.8rem;}
+.admin-modal-title{font-family:var(--display);font-size:1.5rem;letter-spacing:3px;color:var(--white);font-weight:900;}
+.admin-modal-title span{color:var(--silver);}
+.admin-close{background:transparent;border:1px solid var(--border2);color:var(--text2);width:32px;height:32px;cursor:pointer;font-size:0.92rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+.admin-close:hover{border-color:var(--gold);color:var(--gold);}
+.admin-sec{font-family:var(--mono);font-size:0.59rem;letter-spacing:2px;text-transform:uppercase;margin:1.5rem 0 0.9rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:8px;}
+.admin-sec::before{content:"✦";font-size:0.53rem;}
+.admin-sec.c{color:var(--gold);}.admin-sec.g{color:var(--green);}.admin-sec.gd{color:var(--silver);}
+.admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.3rem;}
+.admin-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.3rem;}
+.admin-field{display:flex;flex-direction:column;gap:0.3rem;}
+.admin-field label{font-family:var(--mono);font-size:0.56rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
+.admin-field input{background:var(--bg3);border:1px solid var(--border2);padding:8px 11px;font-family:var(--mono);font-size:0.81rem;outline:none;transition:border-color 0.2s;width:100%;}
+.admin-field input.c{color:var(--gold);}.admin-field input.c:focus{border-color:var(--gold);}
+.admin-field input.g{color:var(--green);}.admin-field input.g:focus{border-color:var(--green);}
+.admin-field input.gd{color:var(--silver);text-transform:uppercase;letter-spacing:2px;}.admin-field input.gd:focus{border-color:var(--silver);}
+.admin-field .fn{font-size:0.56rem;color:var(--text3);font-style:italic;}
+.admin-actions{display:flex;align-items:center;gap:1rem;margin-top:1rem;}
+.btn-save{background:var(--silver-dim);border:1px solid var(--silver);color:var(--silver);padding:9px 22px;font-family:var(--mono);font-size:0.74rem;letter-spacing:1px;cursor:pointer;transition:all 0.2s;}
+.btn-save:hover{background:var(--silver);color:var(--bg);}
+.saved-msg{font-family:var(--mono);font-size:0.66rem;color:var(--success);opacity:0;transition:opacity 0.3s;}
+.saved-msg.show{opacity:1;}
+#adminLogin{display:flex;flex-direction:column;align-items:center;gap:1rem;padding:3rem 2rem;}
+.admin-login-title{font-family:var(--display);font-size:1.8rem;letter-spacing:4px;color:var(--white);font-weight:900;}
+.admin-login-sub{font-family:var(--mono);font-size:0.63rem;color:var(--text3);letter-spacing:2px;}
+#adminPwInput{background:var(--bg3);border:1px solid var(--border2);color:var(--gold);padding:11px 18px;font-family:var(--mono);font-size:1rem;outline:none;text-align:center;letter-spacing:4px;width:250px;}
+#adminPwInput:focus{border-color:var(--gold);}
+.btn-login{background:var(--gold);color:var(--bg);border:none;padding:11px 28px;font-family:var(--mono);font-size:0.77rem;font-weight:700;letter-spacing:2px;cursor:pointer;}
+.btn-login:hover{background:var(--gold2);}
+.admin-err{font-family:var(--mono);font-size:0.67rem;color:#c04040;opacity:0;transition:opacity 0.3s;}
+.admin-err.show{opacity:1;}
+#adminContent{display:none;} #adminContent.show{display:block;}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  #topnav{padding:0 2rem;}section{padding:60px 2rem;}#hero{padding:100px 2rem 60px;}.hero-right{display:none;}
+  .calc-layout,.ai-layout,.contact-layout,.patron-layout,.pcb-layout{grid-template-columns:1fr;}
+  .services-grid,.testimonials-grid{grid-template-columns:1fr 1fr;}
+  .materials-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr 1fr;}.admin-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .nav-right a:not(.nav-cta){display:none;}section{padding:55px 1.4rem;}#hero{padding:90px 1.4rem 50px;}
+  h1{font-size:clamp(40px,11vw,66px);}h2{font-size:clamp(24px,8vw,40px);}
+  .services-grid,.testimonials-grid{grid-template-columns:1fr;}
+  .process-steps{grid-template-columns:1fr 1fr;gap:2rem;}.process-steps::before{display:none;}
+  .footer-top{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;gap:0.5rem;text-align:center;}
+  .form-row,.form-row-3{grid-template-columns:1fr;}.admin-grid,.admin-grid-2{grid-template-columns:1fr;}
+}
+@media(max-width:480px){.process-steps{grid-template-columns:1fr;}}
+@media(max-width:768px){.form-input,.form-select,.textarea-input{font-size:16px!important;}}
+</style>
+</head>
+<body>
+
+<!-- FLOAT NAV -->
+<nav id="floatNav">
+  <a class="fn-item active" href="#hero" data-sec="hero"><span class="fn-icon">⬡</span><span class="fn-label">Home</span><span class="fn-tip">Home</span></a>
+  <a class="fn-item" href="#services" data-sec="services"><span class="fn-icon">⚔️</span><span class="fn-label">Services</span><span class="fn-tip">Services</span></a>
+  <a class="fn-item" href="#calculator" data-sec="calculator"><span class="fn-icon">🖨️</span><span class="fn-label">3D Quote</span><span class="fn-tip">3D Print Quote</span></a>
+  <a class="fn-item g-nav" href="#pcb" data-sec="pcb"><span class="fn-icon">🟩</span><span class="fn-label">PCB</span><span class="fn-tip">PCB Quote</span></a>
+  <a class="fn-item" href="#materials" data-sec="materials"><span class="fn-icon">🛡️</span><span class="fn-label">Materials</span><span class="fn-tip">Materials</span></a>
+  <a class="fn-item" href="#how-it-works" data-sec="how-it-works"><span class="fn-icon">⚙️</span><span class="fn-label">Process</span><span class="fn-tip">How It Works</span></a>
+  <div class="fn-divider"></div>
+  <a class="fn-item" href="#patron" data-sec="patron"><span class="fn-icon">✦</span><span class="fn-label">Patron</span><span class="fn-tip">Become a Patron</span></a>
+  <a class="fn-item" href="#testimonials" data-sec="testimonials"><span class="fn-icon">💬</span><span class="fn-label">Reviews</span><span class="fn-tip">Reviews</span></a>
+  <a class="fn-item" href="#ai-assistant" data-sec="ai-assistant"><span class="fn-icon">🧠</span><span class="fn-label">AI</span><span class="fn-tip">AI Assistant</span></a>
+  <a class="fn-item" href="#contact" data-sec="contact"><span class="fn-icon">📜</span><span class="fn-label">Contact</span><span class="fn-tip">Contact Us</span></a>
+</nav>
+
+<!-- MOBILE NAV -->
+<nav id="mobileNav">
+  <a class="mn-item active" href="#hero" data-sec="hero"><span class="mn-icon">⬡</span><span class="mn-label">Home</span></a>
+  <a class="mn-item" href="#services" data-sec="services"><span class="mn-icon">⚔️</span><span class="mn-label">Services</span></a>
+  <a class="mn-item" href="#calculator" data-sec="calculator"><span class="mn-icon">🖨️</span><span class="mn-label">3D Quote</span></a>
+  <a class="mn-item g-mn" href="#pcb" data-sec="pcb"><span class="mn-icon">🟩</span><span class="mn-label">PCB</span></a>
+  <a class="mn-item" href="#materials" data-sec="materials"><span class="mn-icon">🛡️</span><span class="mn-label">Materials</span></a>
+  <a class="mn-item" href="#how-it-works" data-sec="how-it-works"><span class="mn-icon">⚙️</span><span class="mn-label">Process</span></a>
+  <a class="mn-item" href="#patron" data-sec="patron"><span class="mn-icon">✦</span><span class="mn-label">Patron</span></a>
+  <a class="mn-item" href="#testimonials" data-sec="testimonials"><span class="mn-icon">💬</span><span class="mn-label">Reviews</span></a>
+  <a class="mn-item" href="#ai-assistant" data-sec="ai-assistant"><span class="mn-icon">🧠</span><span class="mn-label">AI</span></a>
+  <a class="mn-item" href="#contact" data-sec="contact"><span class="mn-icon">📜</span><span class="mn-label">Contact</span></a>
+</nav>
+
+<!-- TOP NAV -->
+<div id="topnav">
+  <a href="#hero" class="nav-logo">
+    <img class="nav-logo-img" src="data:image/png;base64,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" alt="QP">
+    <div class="nav-logo-text">QUANTUM<span>PRINTS</span></div>
+  </a>
+  <div class="nav-right">
+    <a href="#calculator">3D Quote</a>
+    <a href="#pcb" style="color:var(--green)">PCB</a>
+    <a href="#patron">Patron</a>
+    <a href="#contact" class="nav-cta">Order Now</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid-bg"></div><div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">3D Printing · PCB Manufacturing · Nairobi</div>
+    <h1>QUANTUM<span class="line2">PRINTS</span></h1>
+    <p class="hero-desc">Professional 3D printing and PCB manufacturing made in Nairobi. Upload your file, get an instant price, and receive precision results — delivered fast.</p>
+    <div class="hero-actions">
+      <a href="#calculator" class="btn btn-gold">Get 3D Quote →</a>
+      <a href="#pcb" class="btn btn-outline" style="border-color:var(--green);color:var(--green)">PCB Quote →</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="stat-val">48<span>hr</span></div><div class="stat-lbl">Avg. Turnaround</div></div>
+      <div><div class="stat-val">0.1<span>mm</span></div><div class="stat-lbl">Layer Resolution</div></div>
+      <div><div class="stat-val">1-2<span>L</span></div><div class="stat-lbl">PCB Layers</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-badge"><strong>Status</strong>● Workshop is Open</div>
+    <div class="hero-badge"><strong>3D Printing</strong>PLA + PETG</div>
+    <div class="hero-badge"><strong>PCB</strong>Single &amp; Double Layer</div>
+    <div class="hero-badge"><strong>Response</strong>Within 2 Hours</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar" aria-hidden="true"><div class="marquee-track">
+  <span class="marquee-item">PLA Printing</span><span class="marquee-item">PETG Printing</span><span class="marquee-item">PCB Fabrication</span><span class="marquee-item">KiCad Files</span><span class="marquee-item">Gerber Files</span><span class="marquee-item">Rapid Prototyping</span><span class="marquee-item">Nairobi Delivery</span><span class="marquee-item">Instant Quotes</span><span class="marquee-item">SMD &amp; THT Assembly</span><span class="marquee-item">PCB Design Service</span>
+  <span class="marquee-item">PLA Printing</span><span class="marquee-item">PETG Printing</span><span class="marquee-item">PCB Fabrication</span><span class="marquee-item">KiCad Files</span><span class="marquee-item">Gerber Files</span><span class="marquee-item">Rapid Prototyping</span><span class="marquee-item">Nairobi Delivery</span><span class="marquee-item">Instant Quotes</span><span class="marquee-item">SMD &amp; THT Assembly</span><span class="marquee-item">PCB Design Service</span>
+</div></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="sec-tag">What We Produce</div>
+  <h2>FULL-SPECTRUM<br>MANUFACTURING</h2>
+  <div class="sec-rule"><div class="sec-rule-line"></div><div class="sec-rule-diamond"></div><div class="sec-rule-line" style="background:linear-gradient(270deg,var(--border2),transparent)"></div></div>
+  <div class="services-grid">
+    <div class="service-card"><div class="service-num">01</div><div class="service-icon">🖨️</div><h3>FDM 3D Printing</h3><p>PLA and PETG for prototypes, enclosures, brackets, and functional parts. 0.1mm resolution, fast turnaround.</p></div>
+    <div class="service-card"><div class="service-num">02</div><div class="service-icon">🟩</div><h3>PCB Fabrication</h3><p>Single and double-layer PCBs manufactured in-house. Upload Gerber or KiCad files — or let us design it for you.</p></div>
+    <div class="service-card"><div class="service-num">03</div><div class="service-icon">⚡</div><h3>PCB Assembly</h3><p>Bare boards, drilled, or fully assembled. THT and SMD supported. Components quoted separately.</p></div>
+    <div class="service-card"><div class="service-num">04</div><div class="service-icon">📐</div><h3>PCB Design</h3><p>Have a schematic but no layout? Send us your circuit and we'll design and fabricate the board in KiCad.</p></div>
+    <div class="service-card"><div class="service-num">05</div><div class="service-icon">🏭</div><h3>Batch Production</h3><p>Consistent small-batch runs for 3D prints and PCBs. Ideal for product launches, startups, and retail.</p></div>
+    <div class="service-card"><div class="service-num">06</div><div class="service-icon">🚚</div><h3>Nairobi Delivery</h3><p>Same-day or next-day within Nairobi. Nationwide courier with full tracking across Kenya.</p></div>
+  </div>
+</section>
+
+<!-- 3D CALCULATOR -->
+<section id="calculator" style="background:var(--bg)">
+  <div class="sec-tag">3D Printing — Instant Pricing</div>
+  <h2>CALCULATE<br>YOUR PRINT COST</h2>
+  <div class="sec-rule"><div class="sec-rule-line"></div><div class="sec-rule-diamond"></div><div class="sec-rule-line" style="background:linear-gradient(270deg,var(--border2),transparent)"></div></div>
+  <p class="section-desc">Upload your STL — weight and volume calculated automatically. Adjust settings and get a live price instantly.</p>
+  <div class="calc-layout">
+    <div>
+      <div class="upload-zone" id="uploadZone">
+        <input type="file" id="fileInput" accept=".stl,.obj,.3mf">
+        <span class="upload-icon">📂</span>
+        <h3>Upload STL / OBJ / 3MF</h3>
+        <p>Drag &amp; drop or click to browse<br>Weight &amp; volume extracted automatically<br>File included in your WhatsApp quote</p>
+      </div>
+      <div class="stl-status" id="stlStatus">
+        <div class="stl-row"><span class="stl-label">File</span><span class="stl-val" id="sFile">—</span></div>
+        <div class="stl-row"><span class="stl-label">Triangles</span><span class="stl-val" id="sTriangles">—</span></div>
+        <div class="stl-row"><span class="stl-label">Volume (cm³)</span><span class="stl-val" id="sVolume">—</span></div>
+        <div class="stl-row"><span class="stl-label">Bounding Box</span><span class="stl-val" id="sBBox">—</span></div>
+        <div class="stl-row"><span class="stl-label">Est. Weight</span><span class="stl-val" id="sWeight">—</span></div>
+        <div class="stl-parse-msg" id="stlMsg">Values auto-filled below — adjust if needed.</div>
+      </div>
+      <div style="margin-top:1.3rem">
+        <div class="form-row" style="margin-bottom:1rem">
+          <div class="form-group"><label class="form-label">Weight (grams)</label><input type="number" class="form-input" id="inputWeight" placeholder="Auto from STL" min="0" step="0.5" oninput="calcPrice()"><span class="field-hint">Auto-filled · editable</span></div>
+          <div class="form-group"><label class="form-label">Volume (cm³)</label><input type="number" class="form-input" id="inputVolume" placeholder="Auto from STL" min="0" step="0.5" oninput="calcPrice()"><span class="field-hint">Auto-filled · editable</span></div>
+        </div>
+        <div class="form-group"><label class="form-label">Material</label><select class="form-select" id="selectMaterial" onchange="calcPrice()"><option value="pla">PLA — Standard (most affordable)</option><option value="petg">PETG — Durable, semi-flexible</option></select></div>
+        <div class="form-group"><label class="form-label">Print Quality</label><select class="form-select" id="selectQuality" onchange="calcPrice()"><option value="draft">Draft (0.3mm) — Fastest</option><option value="standard" selected>Standard (0.2mm) — Best balance</option><option value="fine">Fine (0.1mm) — Highest detail</option></select></div>
+        <div class="form-group"><label class="form-label">Colour</label><select class="form-select" id="selectColour" onchange="calcPrice()"><option value="standard">Standard — White or Black (no charge)</option><option value="custom">Custom Colour (+KES 150)</option></select></div>
+        <div class="form-group infill-slider"><label class="form-label">Infill — <span id="infillVal" style="color:var(--gold2)">20%</span></label><input type="range" id="infillSlider" min="10" max="100" value="20" step="5" oninput="updateInfill()"><div class="infill-labels"><span>10% Sparse</span><span>100% Solid</span></div></div>
+        <div class="form-group"><label class="form-label">Patron Code (optional)</label><input type="text" class="form-input" id="patronCode" placeholder="Enter patron code for discount" oninput="calcPrice()" autocomplete="off" style="text-transform:uppercase;letter-spacing:2px"><span class="field-hint">Become a patron below to receive your code</span></div>
+        <div class="form-group"><label class="form-label">Quantity</label><input type="number" class="form-input" id="inputQty" value="1" min="1" max="1000" oninput="calcPrice()"></div>
+      </div>
+    </div>
+    <div>
+      <div class="price-result">
+        <div class="price-result-title">3D Print Price Breakdown</div>
+        <ul class="price-breakdown">
+          <li><span>Material cost</span><span class="val" id="rbMaterial">—</span></li>
+          <li><span>Volume surcharge</span><span class="val" id="rbVolume">—</span></li>
+          <li><span>Quality multiplier</span><span class="val" id="rbQuality">—</span></li>
+          <li><span>Infill factor</span><span class="val" id="rbInfill">—</span></li>
+          <li><span>Colour add-on</span><span class="val" id="rbColour">—</span></li>
+          <li><span>Margin &amp; overheads</span><span class="val" id="rbMargin">—</span></li>
+          <li><span>Unit price</span><span class="val" id="rbUnit">—</span></li>
+        </ul>
+        <div id="patronDiscountRow" class="patron-disc-row" style="display:none"><span class="dl">✦ Patron Discount</span><span class="dv" id="rbPatronDiscount">—</span></div>
+        <div class="price-total">
+          <div class="price-total-label">TOTAL (<span id="rbQtyLabel">1</span> unit<span id="rbQtyS"></span>)</div>
+          <div class="price-total-val" id="priceTotal">KES —</div>
+        </div>
+        <p class="price-note">*Estimate only. Min. order KES 400. Confirmed after file review.</p>
+        <button class="btn-quote" onclick="sendPrintQuote()">📲 Send Quote + File via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PCB -->
+<section id="pcb">
+  <div class="sec-tag grn">PCB Manufacturing — Instant Pricing</div>
+  <h2>CUSTOM <span style="color:var(--green)">PCB</span><br>FABRICATION</h2>
+  <div class="sec-rule"><div class="sec-rule-line"></div><div class="sec-rule-diamond" style="background:var(--green)"></div><div class="sec-rule-line" style="background:linear-gradient(270deg,var(--border2),transparent)"></div></div>
+  <p class="section-desc">Upload Gerber, KiCad, or PDF files — or send a schematic for us to design. Live price calculated instantly.</p>
+  <div class="pcb-layout">
+    <div>
+      <div class="pcb-tab-bar">
+        <button class="pcb-tab active" onclick="switchPcbTab('upload',this)">📁 I Have Design Files</button>
+        <button class="pcb-tab" onclick="switchPcbTab('design',this)">✏️ I Need Design Help</button>
+      </div>
+      <div class="pcb-panel active" id="pcbPanelUpload">
+        <div class="upload-zone pcb-zone" id="pcbUploadZone">
+          <input type="file" id="pcbFileInput" accept=".gbr,.zip,.kicad_pcb,.kicad_pro,.pdf,.dxf,.png,.jpg">
+          <span class="upload-icon">🟩</span><h3>Upload Gerber / KiCad / PDF</h3>
+          <p>.gbr · .zip · .kicad_pcb · .pdf · .dxf<br>Drag &amp; drop or click to browse<br>File sent with your WhatsApp quote</p>
+        </div>
+        <div class="pcb-file-status" id="pcbFileStatus">
+          <div class="pcb-file-row"><span class="pcb-file-key">File</span><span class="pcb-file-val" id="pcbFName">—</span></div>
+          <div class="pcb-file-row"><span class="pcb-file-key">Type</span><span class="pcb-file-val" id="pcbFType">—</span></div>
+          <div class="pcb-file-row"><span class="pcb-file-key">Size</span><span class="pcb-file-val" id="pcbFSize">—</span></div>
+        </div>
+        <div style="margin-top:1.3rem">
+          <div class="form-row" style="margin-bottom:1rem">
+            <div class="form-group"><label class="form-label">Board Width (mm)</label><input type="number" class="form-input" id="pcbW" placeholder="e.g. 100" min="1" oninput="calcPcbPrice()"></div>
+            <div class="form-group"><label class="form-label">Board Height (mm)</label><input type="number" class="form-input" id="pcbH" placeholder="e.g. 80" min="1" oninput="calcPcbPrice()"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Number of Layers</label><select class="form-select" id="pcbLayers" onchange="calcPcbPrice()"><option value="1">Single Layer (1L) — Standard rate</option><option value="2">Double Layer (2L) — Premium rate</option></select></div>
+          <div class="form-group"><label class="form-label">Copper Weight</label><select class="form-select" id="pcbCopper" onchange="calcPcbPrice()"><option value="1">1 oz — Standard</option><option value="2">2 oz — Heavy copper (+surcharge)</option></select></div>
+          <div class="form-group"><label class="form-label">Min. Trace Width / Spacing</label><select class="form-select" id="pcbTrace" onchange="calcPcbPrice()"><option value="std">0.3mm / 0.3mm — Standard</option><option value="fine">0.2mm / 0.2mm — Fine (+surcharge)</option><option value="ultra">0.1mm / 0.1mm — Ultra-fine (+surcharge)</option></select></div>
+          <div class="form-group"><label class="form-label">Solder Mask</label><select class="form-select" id="pcbMask" onchange="calcPcbPrice()"><option value="bare">None / Bare board (cheapest)</option><option value="green">Green (standard)</option><option value="blue">Blue</option><option value="red">Red</option><option value="black">Black</option><option value="random">Random — whatever is loaded</option></select></div>
+          <div class="form-group"><label class="form-label">Surface Finish</label><select class="form-select" id="pcbFinish" onchange="calcPcbPrice()"><option value="hasl">HASL — Standard</option><option value="hasl_lf">HASL Lead-Free (+surcharge)</option><option value="enig">ENIG Gold — Premium (+surcharge)</option></select></div>
+          <div class="form-group"><label class="form-label">Assembly Service</label><select class="form-select" id="pcbAssembly" onchange="calcPcbPrice()"><option value="bare">Bare Board Only</option><option value="drilled">Board + Drilling Service</option><option value="assembled">Fully Assembled (components quoted separately)</option></select></div>
+          <div class="form-group" id="pcbComponentGroup" style="display:none"><div class="comp-note"><strong>⚠ Components:</strong> Costs quoted separately. We source parts and add a <span id="compMarkupLabel">15</span>% sourcing markup.</div></div>
+          <div class="form-group"><label class="form-label">Patron Code (optional)</label><input type="text" class="form-input" id="pcbPatronCode" placeholder="Enter patron code for discount" oninput="calcPcbPrice()" style="text-transform:uppercase;letter-spacing:2px"></div>
+          <div class="form-group"><label class="form-label">Quantity (boards)</label><input type="number" class="form-input" id="pcbQty" value="1" min="1" max="500" oninput="calcPcbPrice()"></div>
+          <div class="form-group"><label class="form-label">Special Requirements</label><textarea class="textarea-input" id="pcbNotes" placeholder="Impedance control, drill sizes, edge connectors, silkscreen, conformal coating..."></textarea></div>
+        </div>
+      </div>
+      <div class="pcb-panel" id="pcbPanelDesign">
+        <div class="design-note"><strong>Design Service:</strong> Send your schematic (photo, PDF, or any software export) and we'll lay out the PCB in KiCad. Design fee applies based on complexity.</div>
+        <div class="upload-zone pcb-zone" id="pcbSchUploadZone" style="margin-bottom:1rem">
+          <input type="file" id="pcbSchInput" accept=".pdf,.png,.jpg,.jpeg,.bmp,.svg">
+          <span class="upload-icon">📋</span><h3>Upload Schematic / Circuit Image</h3>
+          <p>PDF · PNG · JPG · BMP · SVG<br>Hand-drawn photo is fine<br>File sent with your WhatsApp quote</p>
+        </div>
+        <div class="pcb-file-status" id="pcbSchStatus">
+          <div class="pcb-file-row"><span class="pcb-file-key">File</span><span class="pcb-file-val" id="pcbSchName">—</span></div>
+          <div class="pcb-file-row"><span class="pcb-file-key">Size</span><span class="pcb-file-val" id="pcbSchSize">—</span></div>
+        </div>
+        <div style="margin-top:1rem">
+          <div class="form-group"><label class="form-label">What does the circuit do?</label><textarea class="textarea-input" id="circuitDesc" placeholder="e.g. 12V DC motor driver with PWM speed control and overcurrent protection..."></textarea></div>
+          <div class="form-row" style="margin-bottom:1rem">
+            <div class="form-group"><label class="form-label">Component Count</label><select class="form-select" id="compCount"><option value="small">1–10 parts</option><option value="medium">11–50 parts</option><option value="large">51–100 parts</option><option value="complex">100+ parts</option></select></div>
+            <div class="form-group"><label class="form-label">Component Type</label><select class="form-select" id="compType"><option value="tht">Through-Hole (THT)</option><option value="smd">Surface Mount (SMD)</option><option value="mixed">Mixed THT + SMD</option></select></div>
+          </div>
+          <div class="form-row" style="margin-bottom:1rem">
+            <div class="form-group"><label class="form-label">Operating Voltage</label><input type="text" class="form-input" id="opVoltage" placeholder="e.g. 5V, 12V, 3.3V"></div>
+            <div class="form-group"><label class="form-label">Max Current</label><input type="text" class="form-input" id="opCurrent" placeholder="e.g. 500mA, 2A"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Signal / Frequency</label><select class="form-select" id="opFreq"><option value="dc">DC / Low-frequency</option><option value="audio">Audio (20Hz–20kHz)</option><option value="rf_low">RF / Switching (100kHz–10MHz)</option><option value="rf_high">High-speed / RF (10MHz+)</option></select></div>
+          <div class="form-row" style="margin-bottom:1rem">
+            <div class="form-group"><label class="form-label">Max Board Size (mm)</label><input type="text" class="form-input" id="maxBoardSize" placeholder="e.g. 100×80 or No constraint"></div>
+            <div class="form-group"><label class="form-label">Layers</label><select class="form-select" id="designLayers"><option value="1">Single Layer (1L)</option><option value="2">Double Layer (2L)</option><option value="auto">Designer decides</option></select></div>
+          </div>
+          <div class="form-group"><label class="form-label">Special Connectors / Requirements</label><input type="text" class="form-input" id="specialReqs" placeholder="e.g. USB-C, JST, UART header, mounting holes..."></div>
+          <div class="form-row" style="margin-bottom:1rem">
+            <div class="form-group"><label class="form-label">Deadline</label><input type="text" class="form-input" id="deadline" placeholder="e.g. 2 weeks, flexible"></div>
+            <div class="form-group"><label class="form-label">Assembly After Design?</label><select class="form-select" id="designAssembly"><option value="bare">Bare board only</option><option value="drilled">Board + drilling</option><option value="assembled">Fully assembled</option><option value="files_only">Design files only</option></select></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="price-result pcb-res" id="pcbPricePanel">
+        <div class="price-result-title"><span style="color:var(--green)">PCB Price Breakdown</span></div>
+        <ul class="price-breakdown">
+          <li><span>Board area</span><span class="val" id="pcbRbArea">—</span></li>
+          <li><span>Base fabrication</span><span class="val" id="pcbRbBase">—</span></li>
+          <li><span>Layer multiplier</span><span class="val" id="pcbRbLayers">—</span></li>
+          <li><span>Copper weight</span><span class="val" id="pcbRbCopper">—</span></li>
+          <li><span>Trace complexity</span><span class="val" id="pcbRbTrace">—</span></li>
+          <li><span>Solder mask</span><span class="val" id="pcbRbMask">—</span></li>
+          <li><span>Surface finish</span><span class="val" id="pcbRbFinish">—</span></li>
+          <li><span>Assembly service</span><span class="val" id="pcbRbAssembly">—</span></li>
+          <li><span>Tools &amp; chemicals</span><span class="val" id="pcbRbOverhead">—</span></li>
+          <li><span>Margin</span><span class="val" id="pcbRbMargin">—</span></li>
+          <li><span>Unit price</span><span class="val" id="pcbRbUnit">—</span></li>
+        </ul>
+        <div id="pcbPatronRow" class="patron-disc-row" style="display:none"><span class="dl">✦ Patron Discount</span><span class="dv" id="pcbPatronDisc">—</span></div>
+        <div class="price-total">
+          <div class="price-total-label">TOTAL (<span id="pcbRbQtyLbl">1</span> board<span id="pcbRbQtyS"></span>)</div>
+          <div class="price-total-val gv" id="pcbTotal">KES —</div>
+        </div>
+        <div id="pcbCompNoteBox" class="comp-note" style="display:none"><strong>+ Components TBD:</strong> Quoted separately. We add a <span id="compMarkupLabel2">15</span>% sourcing markup.</div>
+        <p class="price-note">*Estimate only. Min. order KES 800. Confirmed after file review.</p>
+        <button class="btn-quote gq" onclick="sendPcbQuote()">📲 Send PCB Quote via WhatsApp</button>
+      </div>
+      <div id="pcbDesignNote" style="display:none;margin-top:1rem;background:var(--surface);border:1px solid var(--border2);border-left:2px solid var(--green);padding:1.2rem">
+        <div style="font-family:var(--mono);font-size:0.59rem;color:var(--green);letter-spacing:2px;text-transform:uppercase;margin-bottom:0.6rem">✦ Design Service Pricing</div>
+        <div style="font-size:0.79rem;color:var(--text2);line-height:1.7">Design fee: <span style="color:var(--green);font-family:var(--mono)" id="designFeeLabel">KES 1,500</span> (simple) to <span style="color:var(--green);font-family:var(--mono)" id="designFeeComplexLabel">KES 4,500</span> (complex). Confirmed after schematic review.</div>
+        <button class="btn-quote gq" style="margin-top:1rem" onclick="sendDesignQuote()">📲 Send Design Request via WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section id="materials">
+  <div class="sec-tag">What We Work With</div>
+  <h2>MATERIALS<br>OF THE </h2>
+  <div class="sec-rule"><div class="sec-rule-line"></div><div class="sec-rule-diamond"></div><div class="sec-rule-line" style="background:linear-gradient(270deg,var(--border2),transparent)"></div></div>
+  <p class="section-desc">Industrial-grade filaments for consistent, reliable prints. Choose based on your application's needs.</p>
+  <div class="materials-grid">
+    <div class="material-card"><div class="mat-badge pop">Most Produced</div><h3>PLA</h3><div class="mat-sub">POLYLACTIC ACID · FDM · STANDARD</div><div class="mat-props"><div class="mat-prop"><strong>Strength</strong>High</div><div class="mat-prop"><strong>Flexibility</strong>Rigid</div><div class="mat-prop"><strong>Heat</strong>~60°C</div><div class="mat-prop"><strong>Difficulty</strong>Easy</div></div><div class="mat-bar"><div class="mat-bar-fill" style="width:85%"></div></div><p class="mat-desc">Go-to for prototypes, display models, enclosures, and everyday parts. Biodegradable, high detail, multiple colours. Best for indoor use.</p></div>
+    <div class="material-card"><div class="mat-badge dur">Battle-Hardened</div><h3>PETG</h3><div class="mat-sub">POLYETHYLENE TEREPHTHALATE GLYCOL · FDM</div><div class="mat-props"><div class="mat-prop"><strong>Strength</strong>Very High</div><div class="mat-prop"><strong>Flexibility</strong>Semi-Flex</div><div class="mat-prop"><strong>Heat</strong>~80°C</div><div class="mat-prop"><strong>Difficulty</strong>Moderate</div></div><div class="mat-bar"><div class="mat-bar-fill sv" style="width:92%"></div></div><p class="mat-desc">Engineering-grade toughness meets ease of printing. Impact-resistant, slightly flexible. Perfect for mechanical parts, outdoor fixtures, and food-safe applications.</p></div>
+  </div>
+  <div class="mat-coming"><div class="mat-coming-tag">⚔ Incoming to the Workshop /div><p>Expanding our arsenal. <strong>TPU (flexible), ABS, and specialty filaments</strong> are being battle-tested. Gold Patrons get first access at launch.</p></div>
+</section>
+
+<!-- PROCESS -->
+<section id="how-it-works">
+  <div class="sec-tag">The Process</div>
+  <h2>FROM FILE<br>TO YOUR DOOR</h2>
+  <div class="sec-rule"><div class="sec-rule-line"></div><div class="sec-rule-diamond"></div><div class="sec-rule-line" style="background:linear-gradient(270deg,var(--border2),transparent)"></div></div>
+  <div class="process-steps">
+    <div class="process-step"><div class="step-num">I</div><div class="step-icon">📤</div><h3>Upload &amp; Quote</h3><p>Upload your STL or Gerber file. Geometry parsed automatically. Live price instantly.</p></div>
+    <div class="process-step"><div class="step-num">II</div><div class="step-icon">✅</div><h3>Confirm Order</h3><p>Send your quote via WhatsApp with your file attached. We confirm price and accept payment.</p></div>
+    <div class="process-step"><div class="step-num">III</div><div class="step-icon">⚙️</div><h3>Produce It</h3><p>We manufacture and inspect every part against your specs before it leaves the workshop.</p></div>
+    <div class="process-step"><div class="step-num">IV</div><div class="step-icon">🚀</div><h3>Delivered</h3><p>Same-day or next-day in Nairobi. Nationwide courier with full tracking.</p></div>
+  </div>
+</section>
+
+<!-- PATRON -->
+<section id="patron" style="background:var(--bg)">
+  <div class="patron-glow"></div>
+  <div class="patron-layout">
+    <div>
+      <div class="patron-eyebrow">Support the Workshop</div>
+      <h2>BECOME A<br><span style="color:var(--gold)">PATRON</span></h2>
+      <p class="patron-desc">Quantum Prints is a growing local business forging 3D prints and PCBs in Nairobi. Support our workshop and earn real price leverage on every order — both services.</p>
+      <ul class="patron-perks">
+        <li><div class="perk-icon">🏷️</div><div><strong>Discount on 3D &amp; PCB</strong> — Your code applies to both services in each live calculator.</div></li>
+        <li><div class="perk-icon">⚡</div><div><strong>Priority workshop Queue</strong> — Bronze: +1 slot. Silver: same-day. Gold: dedicated slot.</div></li>
+        <li><div class="perk-icon">🎨</div><div><strong>Free Colour &amp; Mask Upgrades</strong> — Silver &amp; Gold get custom 3D colour and PCB solder mask free.</div></li>
+        <li><div class="perk-icon">🔬</div><div><strong>First Access</strong> — Gold patrons get early access to new materials, PCB capabilities, and the AI Assistant.</div></li>
+        <li><div class="perk-icon">🤝</div><div><strong>Private Direct Line</strong> — Gold patrons get a private WhatsApp contact for dedicated support.</div></li>
+      </ul>
+      <a href="#contact" class="btn btn-outline">Questions? Contact Us</a>
+    </div>
+    <div>
+      <div class="patron-card">
+        <div class="patron-card-title">✦ Choose Your Patron Tier — Valid on 3D &amp; PCB Orders</div>
+        <div class="patron-tier selected" id="tier-bronze" onclick="selectTier('bronze')"><div class="pt-header"><div><div class="pt-name">🥉 Bronze Patron</div><div class="pt-badge">5% OFF — 3D &amp; PCB</div></div><div class="pt-price">KES 500<span>/mo</span></div></div><ul class="pt-perks-list"><li>5% off all 3D prints and PCB orders</li><li>Priority queue +1 slot</li><li>Code works in both calculators</li></ul></div>
+        <div class="patron-tier" id="tier-silver" onclick="selectTier('silver')"><div class="pt-header"><div><div class="pt-name">🥈 Silver Patron</div><div class="pt-badge">10% OFF + FREE COLOUR + PCB MASK</div></div><div class="pt-price">KES 1,200<span>/mo</span></div></div><ul class="pt-perks-list"><li>10% off all orders</li><li>Same-day processing</li><li>Free custom 3D colour &amp; PCB mask</li></ul></div>
+        <div class="patron-tier" id="tier-gold" onclick="selectTier('gold')"><div class="pt-header"><div><div class="pt-name">🥇 Gold Patron</div><div class="pt-badge">15% OFF + ALL WORKSHOP PERKS</div></div><div class="pt-price">KES 2,500<span>/mo</span></div></div><ul class="pt-perks-list"><li>15% off all orders</li><li>Dedicated manufacturing slot</li><li>Free colour, finish &amp; mask on all orders</li><li>Early access to new materials &amp; AI Assistant</li><li>Private WhatsApp direct line</li></ul></div>
+        <div class="patron-form">
+          <input type="text" id="patronName" placeholder="Full name" autocomplete="name">
+          <input type="email" id="patronEmail" placeholder="Email address" autocomplete="email">
+          <input type="tel" id="patronPhone" placeholder="WhatsApp number" autocomplete="tel">
+          <button class="btn-patron" onclick="joinPatron()">Join the Workshop →</button>
+          <div class="patron-note">We'll send your discount code via WhatsApp within 24hrs of your first payment.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="sec-tag">Battle-Tested</div>
+  <h2>TRUSTED BY<br>MAKERS &amp; BUILDERS</h2>
+  <div class="sec-rule"><div class="sec-rule-line"></div><div class="sec-rule-diamond"></div><div class="sec-rule-line" style="background:linear-gradient(270deg,var(--border2),transparent)"></div></div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card"><div class="stars">✦ ✦ ✦ ✦ ✦</div><p>Got my drone frame prototype in under 24 hours. The PETG print was incredibly clean — tolerances were spot on. Ordering in bulk for our next production run.</p><div class="testimonial-author"><div class="author-avatar">MK</div><div><div class="author-name">Michael K.</div><div class="author-role">UAV Engineer · Nairobi</div></div></div></div>
+    <div class="testimonial-card"><div class="stars">✦ ✦ ✦ ✦ ✦</div><p>Uploaded my KiCad Gerbers, got a live price instantly, PCB in my hands in 3 days. No issues with traces or pads. Impressive for local in-house manufacturing.</p><div class="testimonial-author"><div class="author-avatar">BN</div><div><div class="author-name">Brian N.</div><div class="author-role">Electronics Engineer</div></div></div></div>
+    <div class="testimonial-card"><div class="stars">✦ ✦ ✦ ✦ ✦</div><p>The STL upload and live price calculator changed everything. Uploaded the file, price broke down in real time, sent WhatsApp — parts arrived next day. Seamless.</p><div class="testimonial-author"><div class="author-avatar">JO</div><div><div class="author-name">James O.</div><div class="author-role">Product Designer · Westlands</div></div></div></div>
+  </div>
+</section>
+
+<!-- AI -->
+<section id="ai-assistant" style="background:var(--bg)">
+  <div class="ai-bg"></div><div class="ai-glow"></div>
+  <div class="ai-layout">
+    <div>
+      <div class="ai-eyebrow">Coming Soon — 2025</div>
+      <h2 class="ai-h2">QUANTUM <span>AI</span><br>DESKTOP ASSISTANT</h2>
+      <p class="ai-desc">Our next product — an intelligent AI-powered desktop assistant built for professionals and businesses across Africa. Private, powerful, always on.</p>
+      <ul class="ai-features">
+        <li><div class="ai-feat-icon">🧠</div><div><strong>Context-Aware Intelligence</strong> — Learns your workflow and preferences for personalised responses.</div></li>
+        <li><div class="ai-feat-icon">🔒</div><div><strong>Local &amp; Private</strong> — Runs entirely on your device. Your data never leaves your machine.</div></li>
+        <li><div class="ai-feat-icon">⚡</div><div><strong>Automate Repetitive Work</strong> — Emails, files, reports, scheduling — all handled.</div></li>
+        <li><div class="ai-feat-icon">🌍</div><div><strong>Built for Africa</strong> — M-Pesa integrations, Swahili/English support, offline capability.</div></li>
+        <li><div class="ai-feat-icon">🔌</div><div><strong>App Integrations</strong> — Google Workspace, WhatsApp Business, Excel, and local tools.</div></li>
+      </ul>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap">
+        <button class="btn btn-silver" onclick="document.getElementById('aiName').focus()">Reserve My Spot →</button>
+        <a href="#contact" class="btn btn-outline">Ask a Question</a>
+      </div>
+    </div>
+    <div>
+      <div class="ai-card">
+        <div class="ai-card-title">✦ Early Access Waitlist</div>
+        <div class="ai-stat-bar">
+          <div class="ai-stat-row"><span class="ak">Status</span><span class="av">● Building — Beta Q3 2025</span></div>
+          <div class="ai-stat-row"><span class="ak">Gold Patron</span><span class="av">First access guaranteed</span></div>
+          <div class="ai-stat-row"><span class="ak">Pricing</span><span class="av">Free beta → KES 1,200/mo Pro</span></div>
+        </div>
+        <div class="ai-wl-form">
+          <input type="text" id="aiName" placeholder="Full name" autocomplete="name">
+          <input type="email" id="aiEmail" placeholder="Email address" autocomplete="email">
+          <input type="tel" id="aiPhone" placeholder="WhatsApp (optional)" autocomplete="tel">
+          <select id="aiUseCase" class="form-select" style="background:var(--bg3);color:var(--text);">
+            <option value="">What will you use it for?</option>
+            <option>Personal productivity</option><option>Running a small business</option>
+            <option>Freelance / consulting</option><option>Corporate team use</option><option>Just curious</option>
+          </select>
+          <button class="btn-wl" onclick="joinWaitlist()">Join the Waitlist →</button>
+          <div class="wl-note">🔒 No spam. No payment now. We'll reach out when early access opens.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-tag">Summon Us</div>
+  <div class="contact-layout">
+    <div class="contact-info">
+      <h2>LET'S FORGE<br>SOMETHING</h2>
+      <p>Have a 3D print, PCB project, or any question? We respond within 2 hours during business hours.</p>
+      <div class="contact-methods">
+        <a href="https://wa.me/254797160016?text=Hi%20Quantum%20Prints!" class="contact-method" target="_blank" rel="noopener"><div class="contact-method-icon wa">💬</div><div><div class="contact-method-label">WhatsApp — Fastest</div><div class="contact-method-val">+254 797 160 016</div></div></a>
+        <a href="mailto:okemwaquantumprints@gmail.com" class="contact-method"><div class="contact-method-icon">📧</div><div><div class="contact-method-label">Email Us</div><div class="contact-method-val">okemwaquantumprints@gmail.com</div></div></a>
+        <div class="contact-method" style="cursor:default"><div class="contact-method-icon">📍</div><div><div class="contact-method-label">Based In</div><div class="contact-method-val">Nairobi, Kenya</div></div></div>
+        <div class="contact-method" style="cursor:default"><div class="contact-method-icon">🕒</div><div><div class="contact-method-label">Hours</div><div class="contact-method-val">Mon–Sat · 8am–7pm EAT</div></div></div>
+      </div>
+    </div>
+    <div class="contact-form-box">
+      <h3>Send an Enquiry</h3>
+      <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="e.g. John Kamau" id="contactName"></div>
+      <div class="form-group"><label class="form-label">Email or WhatsApp</label><input type="text" class="form-input" placeholder="email or +254..." id="contactContact"></div>
+      <div class="form-group"><label class="form-label">Service Needed</label><select class="form-select" id="contactService"><option>3D Printing</option><option>PCB Fabrication</option><option>PCB Design Service</option><option>Both 3D + PCB</option><option>General Enquiry</option></select></div>
+      <div class="form-group"><label class="form-label">Project Description</label><textarea class="textarea-input" id="contactMsg" placeholder="Describe your project — material, quantity, dimensions, deadline..."></textarea></div>
+      <button class="btn-send" onclick="sendContactWhatsApp()">Send via WhatsApp →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="footer-logo-text">QUANTUM<span>PRINTS</span></span><p>3D printing and PCB manufacturing made in Nairobi. Precision, speed, and quality on every order.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">3D Printing</a></li><li><a href="#pcb">PCB Fabrication</a></li><li><a href="#pcb">PCB Design</a></li><li><a href="#services">Assembly</a></li></ul></div>
+    <div class="footer-col"><h4>Get a Quote</h4><ul><li><a href="#calculator">3D Print Quote</a></li><li><a href="#pcb">PCB Quote</a></li><li><a href="#patron">Become a Patron</a></li><li><a href="#ai-assistant">AI Assistant</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="https://wa.me/254797160016" target="_blank">WhatsApp</a></li><li><a href="mailto:okemwaquantumprints@gmail.com">Email Us</a></li><li><a href="#contact">Enquiry Form</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2025 <span class="acc">Quantum Prints</span>. Nairobi, Kenya.</div>
+    <div title="Admin: Ctrl+Shift+Q">MADE WITH PRECISION ⚔ DELIVERED WITH PRIDE</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/254797160016?text=Hi%20Quantum%20Prints!" class="wa-float" target="_blank" rel="noopener">💬</a>
+<div class="toast" id="toast"></div>
+
+<!-- ATTACH MODAL -->
+<div id="attachModal">
+  <div class="attach-box">
+    <span class="attach-icon">📎</span>
+    <div class="attach-title">ATTACH YOUR FILE</div>
+    <p class="attach-desc">WhatsApp opens with your quote pre-filled. <strong>Manually attach your file</strong> before sending.</p>
+    <div class="attach-fname" id="attachFilename">file.stl</div>
+    <ol class="attach-steps">
+      <li data-n="1">WhatsApp opens with your quote — do NOT send yet</li>
+      <li data-n="2">Tap the 📎 attachment icon in WhatsApp</li>
+      <li data-n="3">Select your file: <strong id="attachFilename2">file.stl</strong></li>
+      <li data-n="4">Now send the message with file attached</li>
+    </ol>
+    <button class="btn-got-it" onclick="closeAttachModal()">Got It — Open WhatsApp ✓</button>
+  </div>
+</div>
+
+<!-- ADMIN — Triple-click footer bottom to open -->
+<div id="adminOverlay">
+  <div id="adminLogin">
+    <div class="admin-login-title">ADMIN <span style="color:var(--silver)">VAULT</span></div>
+    <div class="admin-login-sub">// QUANTUM PRINTS · INTERNAL</div>
+    <input type="password" id="adminPwInput" placeholder="••••••••" maxlength="32" onkeydown="if(event.key==='Enter')checkAdminPw()">
+    <button class="btn-login" onclick="checkAdminPw()">Unlock Vault</button>
+    <div class="admin-err" id="adminErr">Incorrect password</div>
+    <div style="font-family:var(--mono);font-size:0.57rem;color:var(--text3);margin-top:1rem">Press ESC to close &nbsp;|&nbsp; Shortcut: Ctrl+Shift+Q</div>
+  </div>
+  <div class="admin-modal" id="adminContent">
+    <div class="admin-modal-header"><div class="admin-modal-title">ADMIN <span>VAULT</span></div><button class="admin-close" onclick="closeAdmin()">✕</button></div>
+    <div class="admin-sec c">3D Printing — Material Rates</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>PLA Rate (KES/gram)</label><input class="c" type="number" id="ratePLA" value="18" step="0.5" oninput="calcPrice()"><span class="fn">Filament cost per gram</span></div>
+      <div class="admin-field"><label>PETG Rate (KES/gram)</label><input class="c" type="number" id="ratePETG" value="25" step="0.5" oninput="calcPrice()"></div>
+      <div class="admin-field"><label>Volume Rate (KES/cm³)</label><input class="c" type="number" id="rateVolume" value="8" step="0.5" oninput="calcPrice()"><span class="fn">Machine time overhead</span></div>
+    </div>
+    <div class="admin-sec c">3D Printing — Quality Multipliers</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>Draft (0.3mm) Multiplier</label><input class="c" type="number" id="multDraft" value="0.85" step="0.05" oninput="calcPrice()"></div>
+      <div class="admin-field"><label>Standard (0.2mm)</label><input class="c" type="number" id="multStandard" value="1.00" step="0.05" oninput="calcPrice()"></div>
+      <div class="admin-field"><label>Fine (0.1mm) Multiplier</label><input class="c" type="number" id="multFine" value="1.35" step="0.05" oninput="calcPrice()"></div>
+    </div>
+    <div class="admin-sec c">3D Printing — Pricing Rules</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>Custom Colour Add-on (KES)</label><input class="c" type="number" id="addColour" value="150" step="10" oninput="calcPrice()"></div>
+      <div class="admin-field"><label>3D Min. Order (KES)</label><input class="c" type="number" id="minOrder" value="400" step="50" oninput="calcPrice()"></div>
+      <div class="admin-field"><label>3D Margin %</label><input class="c" type="number" id="marginPct" value="30" step="5" oninput="calcPrice()"></div>
+    </div>
+    <div class="admin-sec g">PCB — Base Rates</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>Base Rate (KES/cm²)</label><input class="g" type="number" id="pcbBaseRate" value="85" step="5" oninput="calcPcbPrice()"><span class="fn">Per cm² board area</span></div>
+      <div class="admin-field"><label>Double Layer Multiplier</label><input class="g" type="number" id="pcbDoubleLayerMult" value="1.8" step="0.1" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>PCB Min. Order (KES)</label><input class="g" type="number" id="pcbMinOrder" value="800" step="100" oninput="calcPcbPrice()"></div>
+    </div>
+    <div class="admin-sec g">PCB — Copper &amp; Trace Surcharges</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>2oz Copper (KES)</label><input class="g" type="number" id="pcbCopperSurcharge" value="300" step="50" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>Fine Trace 0.2mm (KES)</label><input class="g" type="number" id="pcbFineTrace" value="200" step="50" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>Ultra Trace 0.1mm (KES)</label><input class="g" type="number" id="pcbUltraTrace" value="500" step="50" oninput="calcPcbPrice()"></div>
+    </div>
+    <div class="admin-sec g">PCB — Solder Mask</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>Bare Board (KES add)</label><input class="g" type="number" id="pcbMaskBare" value="0" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>Coloured Mask (KES add)</label><input class="g" type="number" id="pcbMaskColour" value="250" step="50" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>Random Mask (KES add)</label><input class="g" type="number" id="pcbMaskRandom" value="100" step="50" oninput="calcPcbPrice()"></div>
+    </div>
+    <div class="admin-sec g">PCB — Surface Finish</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>HASL Standard (KES add)</label><input class="g" type="number" id="pcbFinishHASL" value="0" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>HASL Lead-Free (KES add)</label><input class="g" type="number" id="pcbFinishLF" value="150" step="50" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>ENIG Gold (KES add)</label><input class="g" type="number" id="pcbFinishENIG" value="600" step="50" oninput="calcPcbPrice()"></div>
+    </div>
+    <div class="admin-sec g">PCB — Assembly &amp; Overhead</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>Bare Board Fee (KES)</label><input class="g" type="number" id="pcbAssemBare" value="0" oninput="calcPcbPrice()"><span class="fn">Fabrication only</span></div>
+      <div class="admin-field"><label>Drilling Service (KES)</label><input class="g" type="number" id="pcbAssemDrilled" value="400" step="100" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>Full Assembly (KES)</label><input class="g" type="number" id="pcbAssemFull" value="1200" step="100" oninput="calcPcbPrice()"><span class="fn">Labour only</span></div>
+    </div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>Tools &amp; Chemicals Per Board (KES)</label><input class="g" type="number" id="pcbOverhead" value="200" step="50" oninput="calcPcbPrice()"><span class="fn">Etchant, bits, consumables</span></div>
+      <div class="admin-field"><label>PCB Margin %</label><input class="g" type="number" id="pcbMargin" value="35" step="5" oninput="calcPcbPrice()"></div>
+      <div class="admin-field"><label>Component Sourcing Markup %</label><input class="g" type="number" id="compMarkup" value="15" step="5" oninput="updateCompMarkupLabel()"></div>
+    </div>
+    <div class="admin-sec g">PCB — Design Service Fees</div>
+    <div class="admin-grid-2">
+      <div class="admin-field"><label>Simple Design (1–10 parts) KES</label><input class="g" type="number" id="designFeeSimple" value="1500" step="250" oninput="updateDesignFeeLabels()"></div>
+      <div class="admin-field"><label>Medium Design (11–50 parts) KES</label><input class="g" type="number" id="designFeeMed" value="2500" step="250" oninput="updateDesignFeeLabels()"></div>
+      <div class="admin-field"><label>Complex (51–100 parts) KES</label><input class="g" type="number" id="designFeeComplex" value="3500" step="250" oninput="updateDesignFeeLabels()"></div>
+      <div class="admin-field"><label>Very Complex (100+ parts) KES</label><input class="g" type="number" id="designFeeVeryComplex" value="4500" step="250" oninput="updateDesignFeeLabels()"></div>
+    </div>
+    <div class="admin-sec gd">Patron Codes — Valid on 3D &amp; PCB</div>
+    <div class="admin-grid">
+      <div class="admin-field"><label>Bronze Code — 5% off</label><input class="gd" type="text" id="codeBronze" value="QPBRONZE"><span class="fn">Share with Bronze patrons</span></div>
+      <div class="admin-field"><label>Silver Code — 10% off</label><input class="gd" type="text" id="codeSilver" value="QPSILVER"><span class="fn">Share with Silver patrons</span></div>
+      <div class="admin-field"><label>Gold Code — 15% off</label><input class="gd" type="text" id="codeGold" value="QPGOLD15"><span class="fn">Share with Gold patrons</span></div>
+    </div>
+    <div class="admin-actions">
+      <button class="btn-save" onclick="saveRates()">✦ Save &amp; Apply All Rates</button>
+      <span class="saved-msg" id="savedMsg">✦ All rates saved and applied</span>
+    </div>
+  </div>
+</div>
+<script>
+const WA="254797160016";
+const DENSITY={pla:1.24,petg:1.27};
+
+// STL PARSER
+function parseSTLBin(buf){
+  var v=new DataView(buf),n=v.getUint32(80,true);
+  var vol=0,mx=1e9,my=1e9,mz=1e9,Mx=-1e9,My=-1e9,Mz=-1e9,off=84;
+  for(var i=0;i<n;i++){off+=12;var vt=[];for(var j=0;j<3;j++){var x=v.getFloat32(off,true),y=v.getFloat32(off+4,true),z=v.getFloat32(off+8,true);vt.push([x,y,z]);off+=12;mx=Math.min(mx,x);my=Math.min(my,y);mz=Math.min(mz,z);Mx=Math.max(Mx,x);My=Math.max(My,y);Mz=Math.max(Mz,z);}off+=2;var x1=vt[0][0],y1=vt[0][1],z1=vt[0][2],x2=vt[1][0],y2=vt[1][1],z2=vt[1][2],x3=vt[2][0],y3=vt[2][1],z3=vt[2][2];vol+=(x1*(y2*z3-y3*z2)-y1*(x2*z3-x3*z2)+z1*(x2*y3-x3*y2))/6;}
+  return{n:n,vol:Math.abs(vol),mx:mx,my:my,mz:mz,Mx:Mx,My:My,Mz:Mz};
+}
+function parseSTLAsc(txt){
+  var re=/vertex\s+([\d.eE+\-]+)\s+([\d.eE+\-]+)\s+([\d.eE+\-]+)/g,m,pts=[];
+  while((m=re.exec(txt))!==null) pts.push([parseFloat(m[1]),parseFloat(m[2]),parseFloat(m[3])]);
+  if(!pts.length||pts.length%3) throw new Error("bad");
+  var vol=0,mx=1e9,my=1e9,mz=1e9,Mx=-1e9,My=-1e9,Mz=-1e9;
+  for(var i=0;i<pts.length;i+=3){var x1=pts[i][0],y1=pts[i][1],z1=pts[i][2],x2=pts[i+1][0],y2=pts[i+1][1],z2=pts[i+1][2],x3=pts[i+2][0],y3=pts[i+2][1],z3=pts[i+2][2];vol+=(x1*(y2*z3-y3*z2)-y1*(x2*z3-x3*z2)+z1*(x2*y3-x3*y2))/6;[x1,x2,x3].forEach(function(x){mx=Math.min(mx,x);Mx=Math.max(Mx,x);});[y1,y2,y3].forEach(function(y){my=Math.min(my,y);My=Math.max(My,y);});[z1,z2,z3].forEach(function(z){mz=Math.min(mz,z);Mz=Math.max(Mz,z);});}
+  return{n:pts.length/3,vol:Math.abs(vol),mx:mx,my:my,mz:mz,Mx:Mx,My:My,Mz:Mz};
+}
+function processSTL(buf,fname){
+  document.getElementById("stlStatus").classList.add("show");
+  try{
+    var hdr=String.fromCharCode.apply(null,new Uint8Array(buf.slice(0,5)));
+    var r;
+    if(hdr.indexOf("solid")===0){var t=new TextDecoder().decode(buf);r=(t.indexOf("facet")>-1)?parseSTLAsc(t):parseSTLBin(buf);}
+    else{r=parseSTLBin(buf);}
+    var vc=r.vol/1000;
+    var mat=document.getElementById("selectMaterial").value;
+    var inf=parseInt(document.getElementById("infillSlider").value)/100;
+    var w=(vc*inf*(DENSITY[mat]||1.24)).toFixed(1);
+    var dx=(r.Mx-r.mx).toFixed(1),dy=(r.My-r.my).toFixed(1),dz=(r.Mz-r.mz).toFixed(1);
+    document.getElementById("sFile").textContent=fname;
+    document.getElementById("sTriangles").textContent=r.n.toLocaleString();
+    document.getElementById("sVolume").textContent=vc.toFixed(2)+" cm3";
+    document.getElementById("sBBox").textContent=dx+"x"+dy+"x"+dz+" mm";
+    document.getElementById("sWeight").textContent=w+" g ("+Math.round(inf*100)+"% infill)";
+    document.getElementById("stlMsg").textContent="Values auto-filled. Adjust if your slicer differs.";
+    document.getElementById("inputWeight").value=w;
+    document.getElementById("inputVolume").value=vc.toFixed(2);
+    calcPrice();
+  }catch(err){
+    document.getElementById("stlMsg").textContent="Could not parse file - enter weight and volume manually.";
+    document.getElementById("stlMsg").style.color="var(--gold2)";
+  }
+}
+
+// FILE HANDLERS
+var printFile="",pcbFile="",schFile="";
+function hPrint(f){
+  if(!f)return;
+  printFile=f.name;
+  document.getElementById("sFile").textContent=f.name;
+  document.getElementById("sTriangles").innerHTML='<span class="stl-spinner"></span>Parsing...';
+  ["sVolume","sBBox","sWeight"].forEach(function(id){document.getElementById(id).textContent="...";});
+  document.getElementById("stlStatus").classList.add("show");
+  var ext=f.name.split(".").pop().toLowerCase();
+  if(ext==="stl"||ext==="obj"){
+    var rd=new FileReader();
+    rd.onload=function(e){processSTL(e.target.result,f.name);};
+    rd.readAsArrayBuffer(f);
+  }else{
+    document.getElementById("sTriangles").textContent="Not STL";
+    document.getElementById("sVolume").textContent="Enter manually";
+    document.getElementById("sBBox").textContent="—";
+    document.getElementById("sWeight").textContent="Enter manually";
+    document.getElementById("stlMsg").textContent="Not an STL file - enter weight and volume manually.";
+  }
+}
+function hPcb(f){
+  if(!f)return;
+  pcbFile=f.name;
+  document.getElementById("pcbFName").textContent=f.name;
+  document.getElementById("pcbFType").textContent=f.name.split(".").pop().toUpperCase();
+  document.getElementById("pcbFSize").textContent=(f.size/1024).toFixed(1)+" KB";
+  document.getElementById("pcbFileStatus").classList.add("show");
+}
+function hSch(f){
+  if(!f)return;
+  schFile=f.name;
+  document.getElementById("pcbSchName").textContent=f.name;
+  document.getElementById("pcbSchSize").textContent=(f.size/1024).toFixed(1)+" KB";
+  document.getElementById("pcbSchStatus").classList.add("show");
+}
+
+// FILE UPLOAD EVENTS
+var UZ=document.getElementById("uploadZone");
+var FI=document.getElementById("fileInput");
+FI.addEventListener("change",function(e){hPrint(e.target.files[0]);});
+UZ.addEventListener("dragover",function(e){e.preventDefault();UZ.classList.add("dragover");});
+UZ.addEventListener("dragleave",function(){UZ.classList.remove("dragover");});
+UZ.addEventListener("drop",function(e){e.preventDefault();UZ.classList.remove("dragover");hPrint(e.dataTransfer.files[0]);});
+
+var PU=document.getElementById("pcbUploadZone");
+var PFI=document.getElementById("pcbFileInput");
+PFI.addEventListener("change",function(e){hPcb(e.target.files[0]);});
+PU.addEventListener("dragover",function(e){e.preventDefault();PU.classList.add("dragover");});
+PU.addEventListener("dragleave",function(){PU.classList.remove("dragover");});
+PU.addEventListener("drop",function(e){e.preventDefault();PU.classList.remove("dragover");hPcb(e.dataTransfer.files[0]);});
+
+var SU=document.getElementById("pcbSchUploadZone");
+var SFI=document.getElementById("pcbSchInput");
+SFI.addEventListener("change",function(e){hSch(e.target.files[0]);});
+SU.addEventListener("dragover",function(e){e.preventDefault();SU.classList.add("dragover");});
+SU.addEventListener("dragleave",function(){SU.classList.remove("dragover");});
+SU.addEventListener("drop",function(e){e.preventDefault();SU.classList.remove("dragover");hSch(e.dataTransfer.files[0]);});
+
+["selectMaterial","infillSlider"].forEach(function(id){
+  document.getElementById(id).addEventListener("change",function(){
+    var vol=parseFloat(document.getElementById("inputVolume").value);
+    if(!vol)return;
+    var mat=document.getElementById("selectMaterial").value;
+    var inf=parseInt(document.getElementById("infillSlider").value)/100;
+    var w=(vol*inf*(DENSITY[mat]||1.24)).toFixed(1);
+    document.getElementById("inputWeight").value=w;
+    document.getElementById("sWeight").textContent=w+" g ("+Math.round(inf*100)+"% infill)";
+    calcPrice();
+  });
+});
+
+function updateInfill(){
+  document.getElementById("infillVal").textContent=document.getElementById("infillSlider").value+"%";
+  calcPrice();
+}
+
+// PATRON DISCOUNT CODE
+function getDisc(code){
+  var b=(document.getElementById("codeBronze")?document.getElementById("codeBronze").value:"QPBRONZE").toUpperCase().trim();
+  var s=(document.getElementById("codeSilver")?document.getElementById("codeSilver").value:"QPSILVER").toUpperCase().trim();
+  var g=(document.getElementById("codeGold")?document.getElementById("codeGold").value:"QPGOLD15").toUpperCase().trim();
+  var c=(code||"").toUpperCase().trim();
+  if(!c)return null;
+  if(c===g)return{pct:15,tier:"Gold 15%"};
+  if(c===s)return{pct:10,tier:"Silver 10%"};
+  if(c===b)return{pct:5,tier:"Bronze 5%"};
+  return{pct:0,tier:null};
+}
+
+// 3D PRICE CALCULATOR
+function calcPrice(){
+  var wt=parseFloat(document.getElementById("inputWeight").value)||0;
+  var vol=parseFloat(document.getElementById("inputVolume").value)||0;
+  var mat=document.getElementById("selectMaterial").value;
+  var qual=document.getElementById("selectQuality").value;
+  var col=document.getElementById("selectColour").value;
+  var inf=parseInt(document.getElementById("infillSlider").value);
+  var qty=Math.max(1,parseInt(document.getElementById("inputQty").value)||1);
+  var code=document.getElementById("patronCode").value;
+  var rP=parseFloat((document.getElementById("ratePLA")||{value:"18"}).value)||18;
+  var rG=parseFloat((document.getElementById("ratePETG")||{value:"25"}).value)||25;
+  var rV=parseFloat((document.getElementById("rateVolume")||{value:"8"}).value)||8;
+  var mD=parseFloat((document.getElementById("multDraft")||{value:"0.85"}).value)||0.85;
+  var mS=parseFloat((document.getElementById("multStandard")||{value:"1.0"}).value)||1.0;
+  var mF=parseFloat((document.getElementById("multFine")||{value:"1.35"}).value)||1.35;
+  var cA=parseFloat((document.getElementById("addColour")||{value:"150"}).value)||150;
+  var mn=parseFloat((document.getElementById("minOrder")||{value:"400"}).value)||400;
+  var mg=(parseFloat((document.getElementById("marginPct")||{value:"30"}).value)||30)/100;
+  var disc=getDisc(code);
+  if(wt===0&&vol===0){
+    ["rbMaterial","rbVolume","rbQuality","rbInfill","rbColour","rbMargin","rbUnit"].forEach(function(id){document.getElementById(id).textContent="—";});
+    document.getElementById("priceTotal").textContent="KES —";
+    document.getElementById("rbQtyLabel").textContent=qty;
+    document.getElementById("rbQtyS").textContent=qty>1?"s":"";
+    document.getElementById("patronDiscountRow").style.display="none";
+    return;
+  }
+  var mR=mat==="pla"?rP:rG;
+  var mL=mat==="pla"?"PLA":"PETG";
+  var mC=wt*mR,vC=vol*rV;
+  var iM=0.65+(inf/100)*0.65;
+  var qM=qual==="draft"?mD:qual==="fine"?mF:mS;
+  var qL=qual==="draft"?"Draft x"+mD:qual==="fine"?"Fine x"+mF:"Std x"+mS;
+  var base=(mC+vC)*iM*qM,mgC=base*mg;
+  var unit=Math.max(base+mgC+(col==="custom"?cA:0),mn);
+  var dA=0;
+  if(disc&&disc.pct>0){dA=unit*(disc.pct/100);unit-=dA;}
+  var tot=unit*qty;
+  document.getElementById("rbMaterial").textContent="KES "+mC.toFixed(0)+" ("+mL+" "+mR+"/g x "+wt+"g)";
+  document.getElementById("rbVolume").textContent="KES "+vC.toFixed(0)+" ("+rV+"/cm3 x "+vol+"cm3)";
+  document.getElementById("rbQuality").textContent=qL;
+  document.getElementById("rbInfill").textContent="x"+iM.toFixed(2)+" ("+inf+"%)";
+  document.getElementById("rbColour").textContent=col==="custom"?"+KES "+cA:"No charge";
+  document.getElementById("rbMargin").textContent="+KES "+mgC.toFixed(0)+" ("+(mg*100).toFixed(0)+"%)";
+  document.getElementById("rbUnit").textContent="KES "+unit.toFixed(0)+" per unit";
+  document.getElementById("rbQtyLabel").textContent=qty;
+  document.getElementById("rbQtyS").textContent=qty>1?"s":"";
+  document.getElementById("priceTotal").textContent="KES "+tot.toFixed(0);
+  var pdr=document.getElementById("patronDiscountRow");
+  if(disc&&disc.pct>0){
+    document.getElementById("rbPatronDiscount").textContent=disc.tier+" (-KES "+dA.toFixed(0)+")";
+    pdr.style.display="flex";
+  }else if(code.trim()&&disc&&disc.pct===0){
+    document.getElementById("rbPatronDiscount").textContent="Invalid code";
+    pdr.style.display="flex";
+  }else{pdr.style.display="none";}
+}
+
+// PCB PRICE CALCULATOR
+function calcPcbPrice(){
+  var W=parseFloat(document.getElementById("pcbW").value)||0;
+  var H=parseFloat(document.getElementById("pcbH").value)||0;
+  var layers=parseInt(document.getElementById("pcbLayers").value)||1;
+  var copper=parseInt(document.getElementById("pcbCopper").value)||1;
+  var trace=document.getElementById("pcbTrace").value;
+  var mask=document.getElementById("pcbMask").value;
+  var finish=document.getElementById("pcbFinish").value;
+  var assembly=document.getElementById("pcbAssembly").value;
+  var qty=Math.max(1,parseInt(document.getElementById("pcbQty").value)||1);
+  var code=document.getElementById("pcbPatronCode").value;
+  var bR=parseFloat((document.getElementById("pcbBaseRate")||{value:"85"}).value)||85;
+  var dM=parseFloat((document.getElementById("pcbDoubleLayerMult")||{value:"1.8"}).value)||1.8;
+  var mn=parseFloat((document.getElementById("pcbMinOrder")||{value:"800"}).value)||800;
+  var cuS=parseFloat((document.getElementById("pcbCopperSurcharge")||{value:"300"}).value)||300;
+  var fT=parseFloat((document.getElementById("pcbFineTrace")||{value:"200"}).value)||200;
+  var uT=parseFloat((document.getElementById("pcbUltraTrace")||{value:"500"}).value)||500;
+  var mBare=parseFloat((document.getElementById("pcbMaskBare")||{value:"0"}).value)||0;
+  var mCol=parseFloat((document.getElementById("pcbMaskColour")||{value:"250"}).value)||250;
+  var mRand=parseFloat((document.getElementById("pcbMaskRandom")||{value:"100"}).value)||100;
+  var fH=parseFloat((document.getElementById("pcbFinishHASL")||{value:"0"}).value)||0;
+  var fL=parseFloat((document.getElementById("pcbFinishLF")||{value:"150"}).value)||150;
+  var fE=parseFloat((document.getElementById("pcbFinishENIG")||{value:"600"}).value)||600;
+  var aBare=parseFloat((document.getElementById("pcbAssemBare")||{value:"0"}).value)||0;
+  var aDrill=parseFloat((document.getElementById("pcbAssemDrilled")||{value:"400"}).value)||400;
+  var aFull=parseFloat((document.getElementById("pcbAssemFull")||{value:"1200"}).value)||1200;
+  var oh=parseFloat((document.getElementById("pcbOverhead")||{value:"200"}).value)||200;
+  var mg=(parseFloat((document.getElementById("pcbMargin")||{value:"35"}).value)||35)/100;
+  var cMup=parseFloat((document.getElementById("compMarkup")||{value:"15"}).value)||15;
+  var disc=getDisc(code);
+  var isAss=assembly==="assembled";
+  document.getElementById("pcbComponentGroup").style.display=isAss?"block":"none";
+  document.getElementById("pcbCompNoteBox").style.display=isAss?"block":"none";
+  if(document.getElementById("compMarkupLabel"))document.getElementById("compMarkupLabel").textContent=cMup;
+  if(document.getElementById("compMarkupLabel2"))document.getElementById("compMarkupLabel2").textContent=cMup;
+  if(W===0||H===0){
+    ["pcbRbArea","pcbRbBase","pcbRbLayers","pcbRbCopper","pcbRbTrace","pcbRbMask","pcbRbFinish","pcbRbAssembly","pcbRbOverhead","pcbRbMargin","pcbRbUnit"].forEach(function(id){document.getElementById(id).textContent="—";});
+    document.getElementById("pcbTotal").textContent="KES —";
+    document.getElementById("pcbRbQtyLbl").textContent=qty;
+    document.getElementById("pcbRbQtyS").textContent=qty>1?"s":"";
+    document.getElementById("pcbPatronRow").style.display="none";
+    return;
+  }
+  var area=(W*H)/100,lM=layers===2?dM:1.0;
+  var base=area*bR*lM;
+  var cuA=copper===2?cuS:0;
+  var tA=trace==="fine"?fT:trace==="ultra"?uT:0;
+  var mkA=mask==="bare"?mBare:mask==="random"?mRand:mCol;
+  var fnA=finish==="hasl_lf"?fL:finish==="enig"?fE:fH;
+  var asA=assembly==="drilled"?aDrill:assembly==="assembled"?aFull:aBare;
+  var sub=base+cuA+tA+mkA+fnA+asA+oh,mgA=sub*mg;
+  var unit=Math.max(sub+mgA,mn);
+  var dA=0;
+  if(disc&&disc.pct>0){dA=unit*(disc.pct/100);unit-=dA;}
+  var tot=unit*qty;
+  document.getElementById("pcbRbArea").textContent=area.toFixed(1)+" cm2 ("+W+"x"+H+"mm)";
+  document.getElementById("pcbRbBase").textContent="KES "+base.toFixed(0)+" ("+bR+"/cm2 x "+area.toFixed(1)+")";
+  document.getElementById("pcbRbLayers").textContent=layers===2?"x"+dM+" (double)":"x1.0 (single)";
+  document.getElementById("pcbRbCopper").textContent=cuA>0?"+KES "+cuA+" (2oz)":"1oz standard";
+  document.getElementById("pcbRbTrace").textContent=tA>0?"+KES "+tA+" ("+trace+")":"Standard";
+  document.getElementById("pcbRbMask").textContent=mkA>0?"+KES "+mkA+" ("+mask+")":"No charge";
+  document.getElementById("pcbRbFinish").textContent=fnA>0?"+KES "+fnA+" ("+finish+")":"HASL standard";
+  document.getElementById("pcbRbAssembly").textContent=asA>0?"+KES "+asA+" ("+assembly+")":"Bare board";
+  document.getElementById("pcbRbOverhead").textContent="+KES "+oh;
+  document.getElementById("pcbRbMargin").textContent="+KES "+mgA.toFixed(0)+" ("+(mg*100).toFixed(0)+"%)";
+  document.getElementById("pcbRbUnit").textContent="KES "+unit.toFixed(0)+" per board";
+  document.getElementById("pcbRbQtyLbl").textContent=qty;
+  document.getElementById("pcbRbQtyS").textContent=qty>1?"s":"";
+  document.getElementById("pcbTotal").textContent="KES "+tot.toFixed(0);
+  var pdr=document.getElementById("pcbPatronRow");
+  if(disc&&disc.pct>0){
+    document.getElementById("pcbPatronDisc").textContent=disc.tier+" (-KES "+dA.toFixed(0)+")";
+    pdr.style.display="flex";
+  }else{pdr.style.display="none";}
+}
+
+function updateDesignFeeLabels(){
+  var s=(document.getElementById("designFeeSimple")||{value:"1500"}).value||"1500";
+  var vc=(document.getElementById("designFeeVeryComplex")||{value:"4500"}).value||"4500";
+  var e1=document.getElementById("designFeeLabel");
+  var e2=document.getElementById("designFeeComplexLabel");
+  if(e1)e1.textContent="KES "+s;
+  if(e2)e2.textContent="KES "+vc;
+}
+function updateCompMarkupLabel(){
+  var v=(document.getElementById("compMarkup")||{value:"15"}).value||"15";
+  if(document.getElementById("compMarkupLabel"))document.getElementById("compMarkupLabel").textContent=v;
+  if(document.getElementById("compMarkupLabel2"))document.getElementById("compMarkupLabel2").textContent=v;
+}
+
+// PCB TAB SWITCHING
+function switchPcbTab(tab,btn){
+  document.querySelectorAll(".pcb-tab").forEach(function(t){t.classList.remove("active");});
+  document.querySelectorAll(".pcb-panel").forEach(function(p){p.classList.remove("active");});
+  btn.classList.add("active");
+  var panelId="pcbPanel"+tab.charAt(0).toUpperCase()+tab.slice(1);
+  var panel=document.getElementById(panelId);
+  if(panel)panel.classList.add("active");
+  var isD=(tab==="design");
+  document.getElementById("pcbPricePanel").style.display=isD?"none":"block";
+  document.getElementById("pcbDesignNote").style.display=isD?"block":"none";
+  updateDesignFeeLabels();
+}
+
+// ATTACH FILE MODAL
+var pendingUrl="";
+function showAttach(fname,url){
+  pendingUrl=url;
+  document.getElementById("attachFilename").textContent=fname;
+  document.getElementById("attachFilename2").textContent=fname;
+  document.getElementById("attachModal").classList.add("open");
+}
+function closeAttachModal(){
+  document.getElementById("attachModal").classList.remove("open");
+  if(pendingUrl)window.open(pendingUrl,"_blank");
+  pendingUrl="";
+}
+
+// WHATSAPP SENDERS — using array join to avoid newline issues
+function wa(lines){ return "https://wa.me/"+WA+"?text="+encodeURIComponent(lines.join("\n")); }
+
+function sendPrintQuote(){
+  var wt=document.getElementById("inputWeight").value||"—";
+  var vol=document.getElementById("inputVolume").value||"—";
+  var mEl=document.getElementById("selectMaterial");
+  var qEl=document.getElementById("selectQuality");
+  var mat=mEl.options[mEl.selectedIndex].text;
+  var qual=qEl.options[qEl.selectedIndex].text;
+  var inf=document.getElementById("infillSlider").value+"%";
+  var col=document.getElementById("selectColour").value==="custom"?"Custom":"Standard";
+  var qty=document.getElementById("inputQty").value;
+  var price=document.getElementById("priceTotal").textContent;
+  var code=document.getElementById("patronCode").value.trim();
+  var fname=printFile||"No file uploaded";
+  var lines=[
+    "Hi Quantum Prints!","",
+    "-- 3D PRINT ORDER --","",
+    "File: "+fname,
+    "Weight: "+wt+"g | Volume: "+vol+"cm3",
+    "Material: "+mat,
+    "Quality: "+qual,
+    "Infill: "+inf,
+    "Colour: "+col,
+    "Quantity: "+qty,
+    "Estimate: "+price
+  ];
+  if(code) lines.push("Patron Code: "+code);
+  lines.push("","File attached. Please confirm price and next steps!");
+  var url=wa(lines);
+  if(printFile)showAttach(printFile,url);
+  else window.open(url,"_blank");
+}
+
+function sendPcbQuote(){
+  var W=document.getElementById("pcbW").value||"—";
+  var H=document.getElementById("pcbH").value||"—";
+  var lEl=document.getElementById("pcbLayers");
+  var mEl=document.getElementById("pcbMask");
+  var fEl=document.getElementById("pcbFinish");
+  var aEl=document.getElementById("pcbAssembly");
+  var tEl=document.getElementById("pcbTrace");
+  var cEl=document.getElementById("pcbCopper");
+  var qty=document.getElementById("pcbQty").value;
+  var notes=document.getElementById("pcbNotes").value.trim();
+  var price=document.getElementById("pcbTotal").textContent;
+  var code=document.getElementById("pcbPatronCode").value.trim();
+  var fname=pcbFile||"No file uploaded";
+  var lines=[
+    "Hi Quantum Prints!","",
+    "-- PCB ORDER --","",
+    "File: "+fname,
+    "Board size: "+W+"x"+H+"mm",
+    "Layers: "+lEl.options[lEl.selectedIndex].text,
+    "Copper: "+cEl.options[cEl.selectedIndex].text,
+    "Traces: "+tEl.options[tEl.selectedIndex].text,
+    "Solder mask: "+mEl.options[mEl.selectedIndex].text,
+    "Surface finish: "+fEl.options[fEl.selectedIndex].text,
+    "Assembly: "+aEl.options[aEl.selectedIndex].text,
+    "Quantity: "+qty+" boards",
+    "Estimate: "+price
+  ];
+  if(code) lines.push("Patron Code: "+code);
+  if(notes) lines.push("Notes: "+notes);
+  lines.push("","Design file attached. Please confirm and advise!");
+  var url=wa(lines);
+  if(pcbFile)showAttach(pcbFile,url);
+  else window.open(url,"_blank");
+}
+
+function sendDesignQuote(){
+  var desc=document.getElementById("circuitDesc").value.trim()||"Not provided";
+  var cc=document.getElementById("compCount").value;
+  var ct=document.getElementById("compType").value;
+  var vo=document.getElementById("opVoltage").value||"Not specified";
+  var cu=document.getElementById("opCurrent").value||"Not specified";
+  var fr=document.getElementById("opFreq").value;
+  var sz=document.getElementById("maxBoardSize").value||"No constraint";
+  var dl=document.getElementById("designLayers").value;
+  var sr=document.getElementById("specialReqs").value||"None";
+  var dd=document.getElementById("deadline").value||"Flexible";
+  var da=document.getElementById("designAssembly").value;
+  var fname=schFile||"No file uploaded";
+  var fe=document.getElementById("designFeeLabel")?document.getElementById("designFeeLabel").textContent:"TBD";
+  var lines=[
+    "Hi Quantum Prints!","",
+    "-- PCB DESIGN REQUEST --","",
+    "Schematic file: "+fname,
+    "Circuit function: "+desc,
+    "Components: "+cc,
+    "Component type: "+ct,
+    "Voltage: "+vo+" | Current: "+cu,
+    "Frequency: "+fr,
+    "Max board size: "+sz,
+    "Layers: "+dl,
+    "Special requirements: "+sr,
+    "Assembly after design: "+da,
+    "Deadline: "+dd,
+    "Design fee quote: "+fe,
+    "",
+    "Schematic attached. Please review and advise!"
+  ];
+  var url=wa(lines);
+  if(schFile)showAttach(schFile,url);
+  else window.open(url,"_blank");
+}
+
+function sendContactWhatsApp(){
+  var name=document.getElementById("contactName").value.trim()||"A visitor";
+  var contact=document.getElementById("contactContact").value.trim()||"Not provided";
+  var svc=document.getElementById("contactService").value;
+  var msg=document.getElementById("contactMsg").value.trim()||"No details provided.";
+  var lines=[
+    "Hi Quantum Prints!","",
+    "Enquiry from: "+name,
+    "Contact: "+contact,
+    "Service: "+svc,
+    "",
+    "Details:",
+    msg
+  ];
+  window.open(wa(lines),"_blank");
+  showToast("Opening WhatsApp...");
+}
+
+// PATRON
+var selTier="bronze";
+function selectTier(k){
+  selTier=k;
+  ["bronze","silver","gold"].forEach(function(t){
+    document.getElementById("tier-"+t).classList.remove("selected");
+  });
+  document.getElementById("tier-"+k).classList.add("selected");
+}
+function joinPatron(){
+  var name=document.getElementById("patronName").value.trim();
+  var phone=document.getElementById("patronPhone").value.trim();
+  var email=document.getElementById("patronEmail").value.trim();
+  if(!name||!phone){showToast("Please enter your name and WhatsApp number.");return;}
+  var tierNames={bronze:"Bronze Patron (KES 500/mo)",silver:"Silver Patron (KES 1,200/mo)",gold:"Gold Patron (KES 2,500/mo)"};
+  var lines=[
+    "Hi Quantum Prints!","",
+    "I would like to become a "+tierNames[selTier]+".","",
+    "Name: "+name
+  ];
+  if(email) lines.push("Email: "+email);
+  lines.push("WhatsApp: "+phone,"","Please send my discount code and payment details!");
+  window.open(wa(lines),"_blank");
+  showToast("Opening WhatsApp...");
+}
+
+// AI WAITLIST
+function joinWaitlist(){
+  var name=document.getElementById("aiName").value.trim();
+  var email=document.getElementById("aiEmail").value.trim();
+  var phone=document.getElementById("aiPhone").value.trim();
+  var use=document.getElementById("aiUseCase").value;
+  if(!name||!email){showToast("Please enter your name and email.");return;}
+  var lines=[
+    "Hi Quantum Prints!","",
+    "AI Desktop Assistant - Early Access Waitlist","",
+    "Name: "+name,
+    "Email: "+email
+  ];
+  if(phone) lines.push("WhatsApp: "+phone);
+  lines.push("Use case: "+(use||"Not specified"),"","Please add me to the early access list!");
+  window.open(wa(lines),"_blank");
+  showToast("Opening WhatsApp...");
+}
+
+// TOAST NOTIFICATION
+function showToast(msg){
+  var t=document.getElementById("toast");
+  t.textContent=msg;
+  t.classList.add("show");
+  setTimeout(function(){t.classList.remove("show");},3200);
+}
+
+// ADMIN PANEL
+var ADMIN_PW="qpAdmin2025";
+var clk=0,clkT=null;
+document.querySelector(".footer-bottom").addEventListener("click",function(){
+  clk++;
+  clearTimeout(clkT);
+  clkT=setTimeout(function(){clk=0;},600);
+  if(clk>=3){clk=0;openAdmin();}
+});
+function openAdmin(){
+  document.getElementById("adminOverlay").classList.add("open");
+  document.getElementById("adminLogin").style.display="flex";
+  document.getElementById("adminContent").classList.remove("show");
+  document.getElementById("adminPwInput").value="";
+  document.getElementById("adminErr").classList.remove("show");
+  setTimeout(function(){document.getElementById("adminPwInput").focus();},100);
+}
+function checkAdminPw(){
+  if(document.getElementById("adminPwInput").value===ADMIN_PW){
+    document.getElementById("adminLogin").style.display="none";
+    document.getElementById("adminContent").classList.add("show");
+  }else{
+    document.getElementById("adminErr").classList.add("show");
+    document.getElementById("adminPwInput").value="";
+    setTimeout(function(){document.getElementById("adminErr").classList.remove("show");},2500);
+  }
+}
+function closeAdmin(){
+  document.getElementById("adminOverlay").classList.remove("open");
+  document.getElementById("adminContent").classList.remove("show");
+}
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape")closeAdmin();
+  if(e.ctrlKey&&e.shiftKey&&e.key==="Q"){e.preventDefault();openAdmin();}
+});
+function saveRates(){
+  calcPrice();
+  calcPcbPrice();
+  updateDesignFeeLabels();
+  updateCompMarkupLabel();
+  var m=document.getElementById("savedMsg");
+  m.classList.add("show");
+  setTimeout(function(){m.classList.remove("show");},3000);
+}
+
+// FLOATING NAV — ACTIVE SECTION TRACKING
+var allSec=document.querySelectorAll("section[id]");
+var fnItems=document.querySelectorAll(".fn-item");
+var mnItems=document.querySelectorAll(".mn-item");
+
+function updateNav(){
+  var cur="hero";
+  var offset=window.innerHeight*0.4;
+  allSec.forEach(function(s){
+    if(window.scrollY>=s.offsetTop-offset) cur=s.id;
+  });
+  fnItems.forEach(function(a){
+    a.classList.toggle("active",a.getAttribute("data-sec")===cur);
+  });
+  mnItems.forEach(function(a){
+    a.classList.toggle("active",a.getAttribute("data-sec")===cur);
+  });
+}
+
+window.addEventListener("scroll",updateNav,{passive:true});
+
+// NAV SMOOTH SCROLL
+fnItems.forEach(function(a){
+  a.addEventListener("click",function(e){
+    e.preventDefault();
+    var sec=a.getAttribute("data-sec");
+    var target=document.getElementById(sec);
+    if(target) target.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+});
+mnItems.forEach(function(a){
+  a.addEventListener("click",function(e){
+    e.preventDefault();
+    var sec=a.getAttribute("data-sec");
+    var target=document.getElementById(sec);
+    if(target) target.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+});
+
+// INIT
+calcPrice();
+calcPcbPrice();
+updateDesignFeeLabels();
+updateNav();
+</script>
+</body>
+</html>
