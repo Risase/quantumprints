@@ -1,8 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="3D printing and PCB manufacturing in Nairobi. Instant live quotes, PLA & PETG, single and double-layer PCBs. Same-day or next-day delivery.">
+<meta property="og:title" content="Quantum Prints — 3D Printing & PCB Manufacturing | Nairobi">
+<meta property="og:description" content="Upload your STL or Gerber file and get a live price instantly. Fast turnaround, precision manufacturing, delivered in Nairobi.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://quantumprints.co.ke/">
+<meta property="og:image" content="https://quantumprints.co.ke/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <title>Quantum Prints — 3D Printing & PCB Manufacturing | Nairobi</title>
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIAAKAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAANFJREFUeJylk0EOgjAQRd80hkROwTG4gJ6GpUY3LJSNJiw5DV6AY3iOalIXUhlrm6C+FenM//lMZmS5zB0jl3PhP1nvr2j601Rb7aaaeAMtnoM3MV+pIvxsIKIMUvEHWzHYKlrrTwUisEgJAep683prmhaAMuvek+R57vSEB1txPGy53R0hTdN+GBgt9sTEYaKXQbTzC/43CDcOpoHNeTcu+N0y6yiz7qM5NkAYV1nkfdc1g62iQnjeiwEIU4SJUjinhqgvbA6+X/Q5Q/qkU+f8AHnyTFfd5iL6AAAAAElFTkSuQmCC">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB8UlEQVR4nMVXv0vDQBh9CRVpB8eCIFYdRHAp4uLgInbp4lY3nR1EKZVCCy0GKkhFEEQnFweHjA4ddCs6+RdIFdNBRBFchFY6xEEupvHuy50pyYPS/Li7733v+3E5LR5P2IgQepTGASDmN+B6f8K5zhQtqUVV5mhUCNwLBQFFIpQQUI5EngNCAoOS32893yRkyO29KRk0S0mpcVwFvGxFxvMFA/mCwX3Hm8NTQVoBr2EAMHZ3AACVah0AcHhQUV7rTxn6eZ8vGI5hL3hEeKFwl6U0Aa/XFLxEKBJ9IaCMuw03aimu4Wy57ZBkJPwQqA9kipbzo0AlZMz7gJrEMDq/icf3BM5OPjCXnkXrwcJrr4dG7dhRQRY6zziFRi2FT30cK6sbmJmeQrf7hdzaFiZTY6QSIhX+FQLbtp3/eHwY5vkRmrd3DkEVKPeBbLmN5tXvfafzo4D7vQp0gL9dUq10RH/BpXmK+9ZT33MqlKJS1N03skgvbyPZu4HVfsbCUs4xLvKecoYMgVlKCqthcf0CADAU0wCoS88cHngnVOmCgEQSMhXYgswAj0ilWlfekLjfhDJNya2IaDf0816agIgEI8LzWpR4UgREJIKCV2mhfZSKylxIQKUvBEEoClDOkCcjgH/M0jTxeNse4NEsDER+MvoGuirmouW7vRQAAAAASUVORK5CYII=">
@@ -338,43 +346,6 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
 .btn-got-it{background:var(--gold);color:var(--bg);border:none;padding:12px;font-size:0.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-family:var(--mono);width:100%;}
 .btn-got-it:hover{background:var(--gold2);}
 
-/* ADMIN */
-#adminOverlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.95);backdrop-filter:blur(10px);align-items:flex-start;justify-content:center;overflow-y:auto;padding:2rem 1rem;}
-#adminOverlay.open{display:flex;}
-.admin-modal{background:var(--bg2);border:1px solid var(--border2);border-top:2px solid var(--silver);width:min(920px,96vw);padding:2.2rem;margin:auto;}
-.admin-modal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.8rem;}
-.admin-modal-title{font-family:var(--display);font-size:1.5rem;letter-spacing:3px;color:var(--white);font-weight:900;}
-.admin-modal-title span{color:var(--silver);}
-.admin-close{background:transparent;border:1px solid var(--border2);color:var(--text2);width:32px;height:32px;cursor:pointer;font-size:0.92rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
-.admin-close:hover{border-color:var(--gold);color:var(--gold);}
-.admin-sec{font-family:var(--mono);font-size:0.59rem;letter-spacing:2px;text-transform:uppercase;margin:1.5rem 0 0.9rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border2);display:flex;align-items:center;gap:8px;}
-.admin-sec::before{content:"✦";font-size:0.53rem;}
-.admin-sec.c{color:var(--gold);}.admin-sec.g{color:var(--green);}.admin-sec.gd{color:var(--silver);}
-.admin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.3rem;}
-.admin-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1.3rem;}
-.admin-field{display:flex;flex-direction:column;gap:0.3rem;}
-.admin-field label{font-family:var(--mono);font-size:0.56rem;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
-.admin-field input{background:var(--bg3);border:1px solid var(--border2);padding:8px 11px;font-family:var(--mono);font-size:0.81rem;outline:none;transition:border-color 0.2s;width:100%;}
-.admin-field input.c{color:var(--gold);}.admin-field input.c:focus{border-color:var(--gold);}
-.admin-field input.g{color:var(--green);}.admin-field input.g:focus{border-color:var(--green);}
-.admin-field input.gd{color:var(--silver);text-transform:uppercase;letter-spacing:2px;}.admin-field input.gd:focus{border-color:var(--silver);}
-.admin-field .fn{font-size:0.56rem;color:var(--text3);font-style:italic;}
-.admin-actions{display:flex;align-items:center;gap:1rem;margin-top:1rem;}
-.btn-save{background:var(--silver-dim);border:1px solid var(--silver);color:var(--silver);padding:9px 22px;font-family:var(--mono);font-size:0.74rem;letter-spacing:1px;cursor:pointer;transition:all 0.2s;}
-.btn-save:hover{background:var(--silver);color:var(--bg);}
-.saved-msg{font-family:var(--mono);font-size:0.66rem;color:var(--success);opacity:0;transition:opacity 0.3s;}
-.saved-msg.show{opacity:1;}
-#adminLogin{display:flex;flex-direction:column;align-items:center;gap:1rem;padding:3rem 2rem;}
-.admin-login-title{font-family:var(--display);font-size:1.8rem;letter-spacing:4px;color:var(--white);font-weight:900;}
-.admin-login-sub{font-family:var(--mono);font-size:0.63rem;color:var(--text3);letter-spacing:2px;}
-#adminPwInput{background:var(--bg3);border:1px solid var(--border2);color:var(--gold);padding:11px 18px;font-family:var(--mono);font-size:1rem;outline:none;text-align:center;letter-spacing:4px;width:250px;}
-#adminPwInput:focus{border-color:var(--gold);}
-.btn-login{background:var(--gold);color:var(--bg);border:none;padding:11px 28px;font-family:var(--mono);font-size:0.77rem;font-weight:700;letter-spacing:2px;cursor:pointer;}
-.btn-login:hover{background:var(--gold2);}
-.admin-err{font-family:var(--mono);font-size:0.67rem;color:#c04040;opacity:0;transition:opacity 0.3s;}
-.admin-err.show{opacity:1;}
-#adminContent{display:none;} #adminContent.show{display:block;}
-
 /* RESPONSIVE */
 @media(max-width:1100px){
   #topnav{padding:0 2rem;}section{padding:60px 2rem;}#hero{padding:100px 2rem 60px;}.hero-right{display:none;}
@@ -398,17 +369,17 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
 
 <!-- FLOAT NAV -->
 <nav id="floatNav">
-  <a class="fn-item active" href="#hero" data-sec="hero"><span class="fn-icon">⬡</span><span class="fn-label">Home</span><span class="fn-tip">Home</span></a>
-  <a class="fn-item" href="#services" data-sec="services"><span class="fn-icon">⚔️</span><span class="fn-label">Services</span><span class="fn-tip">Services</span></a>
-  <a class="fn-item" href="#calculator" data-sec="calculator"><span class="fn-icon">🖨️</span><span class="fn-label">3D Quote</span><span class="fn-tip">3D Print Quote</span></a>
-  <a class="fn-item g-nav" href="#pcb" data-sec="pcb"><span class="fn-icon">🟩</span><span class="fn-label">PCB</span><span class="fn-tip">PCB Quote</span></a>
-  <a class="fn-item" href="#materials" data-sec="materials"><span class="fn-icon">🛡️</span><span class="fn-label">Materials</span><span class="fn-tip">Materials</span></a>
-  <a class="fn-item" href="#how-it-works" data-sec="how-it-works"><span class="fn-icon">⚙️</span><span class="fn-label">Process</span><span class="fn-tip">How It Works</span></a>
+  <a class="fn-item active" href="#hero" data-sec="hero"><span class="fn-icon">⬡</span><span class="fn-label">Home</span><span class="fn-tip" aria-hidden="true">Home</span></a>
+  <a class="fn-item" href="#services" data-sec="services"><span class="fn-icon">⚔️</span><span class="fn-label">Services</span><span class="fn-tip" aria-hidden="true">Services</span></a>
+  <a class="fn-item" href="#calculator" data-sec="calculator"><span class="fn-icon">🖨️</span><span class="fn-label">3D Quote</span><span class="fn-tip" aria-hidden="true">3D Print Quote</span></a>
+  <a class="fn-item g-nav" href="#pcb" data-sec="pcb"><span class="fn-icon">🟩</span><span class="fn-label">PCB</span><span class="fn-tip" aria-hidden="true">PCB Quote</span></a>
+  <a class="fn-item" href="#materials" data-sec="materials"><span class="fn-icon">🛡️</span><span class="fn-label">Materials</span><span class="fn-tip" aria-hidden="true">Materials</span></a>
+  <a class="fn-item" href="#how-it-works" data-sec="how-it-works"><span class="fn-icon">⚙️</span><span class="fn-label">Process</span><span class="fn-tip" aria-hidden="true">How It Works</span></a>
   <div class="fn-divider"></div>
-  <a class="fn-item" href="#patron" data-sec="patron"><span class="fn-icon">✦</span><span class="fn-label">Patron</span><span class="fn-tip">Become a Patron</span></a>
-  <a class="fn-item" href="#testimonials" data-sec="testimonials"><span class="fn-icon">💬</span><span class="fn-label">Reviews</span><span class="fn-tip">Reviews</span></a>
-  <a class="fn-item" href="#ai-assistant" data-sec="ai-assistant"><span class="fn-icon">🧠</span><span class="fn-label">AI</span><span class="fn-tip">AI Assistant</span></a>
-  <a class="fn-item" href="#contact" data-sec="contact"><span class="fn-icon">📜</span><span class="fn-label">Contact</span><span class="fn-tip">Contact Us</span></a>
+  <a class="fn-item" href="#patron" data-sec="patron"><span class="fn-icon">✦</span><span class="fn-label">Patron</span><span class="fn-tip" aria-hidden="true">Become a Patron</span></a>
+  <a class="fn-item" href="#testimonials" data-sec="testimonials"><span class="fn-icon">💬</span><span class="fn-label">Reviews</span><span class="fn-tip" aria-hidden="true">Reviews</span></a>
+  <a class="fn-item" href="#ai-assistant" data-sec="ai-assistant"><span class="fn-icon">🧠</span><span class="fn-label">AI</span><span class="fn-tip" aria-hidden="true">AI Assistant</span></a>
+  <a class="fn-item" href="#contact" data-sec="contact"><span class="fn-icon">📜</span><span class="fn-label">Contact</span><span class="fn-tip" aria-hidden="true">Contact Us</span></a>
 </nav>
 
 <!-- MOBILE NAV -->
@@ -655,14 +626,14 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
 <!-- MATERIALS -->
 <section id="materials">
   <div class="sec-tag">What We Work With</div>
-  <h2>MATERIALS<br>OF THE </h2>
+  <h2>MATERIALS<br>OF THE WORKSHOP</h2>
   <div class="sec-rule"><div class="sec-rule-line"></div><div class="sec-rule-diamond"></div><div class="sec-rule-line" style="background:linear-gradient(270deg,var(--border2),transparent)"></div></div>
   <p class="section-desc">Industrial-grade filaments for consistent, reliable prints. Choose based on your application's needs.</p>
   <div class="materials-grid">
     <div class="material-card"><div class="mat-badge pop">Most Produced</div><h3>PLA</h3><div class="mat-sub">POLYLACTIC ACID · FDM · STANDARD</div><div class="mat-props"><div class="mat-prop"><strong>Strength</strong>High</div><div class="mat-prop"><strong>Flexibility</strong>Rigid</div><div class="mat-prop"><strong>Heat</strong>~60°C</div><div class="mat-prop"><strong>Difficulty</strong>Easy</div></div><div class="mat-bar"><div class="mat-bar-fill" style="width:85%"></div></div><p class="mat-desc">Go-to for prototypes, display models, enclosures, and everyday parts. Biodegradable, high detail, multiple colours. Best for indoor use.</p></div>
     <div class="material-card"><div class="mat-badge dur">Battle-Hardened</div><h3>PETG</h3><div class="mat-sub">POLYETHYLENE TEREPHTHALATE GLYCOL · FDM</div><div class="mat-props"><div class="mat-prop"><strong>Strength</strong>Very High</div><div class="mat-prop"><strong>Flexibility</strong>Semi-Flex</div><div class="mat-prop"><strong>Heat</strong>~80°C</div><div class="mat-prop"><strong>Difficulty</strong>Moderate</div></div><div class="mat-bar"><div class="mat-bar-fill sv" style="width:92%"></div></div><p class="mat-desc">Engineering-grade toughness meets ease of printing. Impact-resistant, slightly flexible. Perfect for mechanical parts, outdoor fixtures, and food-safe applications.</p></div>
   </div>
-  <div class="mat-coming"><div class="mat-coming-tag">⚔ Incoming to the Workshop /div><p>Expanding our arsenal. <strong>TPU (flexible), ABS, and specialty filaments</strong> are being battle-tested. Gold Patrons get first access at launch.</p></div>
+  <div class="mat-coming"><div class="mat-coming-tag">⚔ Incoming to the Workshop</div><p>Expanding our arsenal. <strong>TPU (flexible), ABS, and specialty filaments</strong> are being battle-tested. Gold Patrons get first access at launch.</p></div>
 </section>
 
 <!-- PROCESS -->
@@ -730,7 +701,7 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="ai-bg"></div><div class="ai-glow"></div>
   <div class="ai-layout">
     <div>
-      <div class="ai-eyebrow">Coming Soon — 2025</div>
+      <div class="ai-eyebrow">Coming Soon — 2026</div>
       <h2 class="ai-h2">QUANTUM <span>AI</span><br>DESKTOP ASSISTANT</h2>
       <p class="ai-desc">Our next product — an intelligent AI-powered desktop assistant built for professionals and businesses across Africa. Private, powerful, always on.</p>
       <ul class="ai-features">
@@ -749,7 +720,7 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="ai-card">
         <div class="ai-card-title">✦ Early Access Waitlist</div>
         <div class="ai-stat-bar">
-          <div class="ai-stat-row"><span class="ak">Status</span><span class="av">● Building — Beta Q3 2025</span></div>
+          <div class="ai-stat-row"><span class="ak">Status</span><span class="av">● Building — Beta Q3 2026</span></div>
           <div class="ai-stat-row"><span class="ak">Gold Patron</span><span class="av">First access guaranteed</span></div>
           <div class="ai-stat-row"><span class="ak">Pricing</span><span class="av">Free beta → KES 1,200/mo Pro</span></div>
         </div>
@@ -804,8 +775,8 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="footer-col"><h4>Contact</h4><ul><li><a href="https://wa.me/254797160016" target="_blank">WhatsApp</a></li><li><a href="mailto:okemwaquantumprints@gmail.com">Email Us</a></li><li><a href="#contact">Enquiry Form</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <div>© 2025 <span class="acc">Quantum Prints</span>. Nairobi, Kenya.</div>
-    <div title="Admin: Ctrl+Shift+Q">MADE WITH PRECISION ⚔ DELIVERED WITH PRIDE</div>
+    <div>© 2026 <span class="acc">Quantum Prints</span>. Nairobi, Kenya.</div>
+    <div>MADE WITH PRECISION ⚔ DELIVERED WITH PRIDE</div>
   </div>
 </footer>
 
@@ -829,90 +800,7 @@ footer::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;back
   </div>
 </div>
 
-<!-- ADMIN — Triple-click footer bottom to open -->
-<div id="adminOverlay">
-  <div id="adminLogin">
-    <div class="admin-login-title">ADMIN <span style="color:var(--silver)">VAULT</span></div>
-    <div class="admin-login-sub">// QUANTUM PRINTS · INTERNAL</div>
-    <input type="password" id="adminPwInput" placeholder="••••••••" maxlength="32" onkeydown="if(event.key==='Enter')checkAdminPw()">
-    <button class="btn-login" onclick="checkAdminPw()">Unlock Vault</button>
-    <div class="admin-err" id="adminErr">Incorrect password</div>
-    <div style="font-family:var(--mono);font-size:0.57rem;color:var(--text3);margin-top:1rem">Press ESC to close &nbsp;|&nbsp; Shortcut: Ctrl+Shift+Q</div>
-  </div>
-  <div class="admin-modal" id="adminContent">
-    <div class="admin-modal-header"><div class="admin-modal-title">ADMIN <span>VAULT</span></div><button class="admin-close" onclick="closeAdmin()">✕</button></div>
-    <div class="admin-sec c">3D Printing — Material Rates</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>PLA Rate (KES/gram)</label><input class="c" type="number" id="ratePLA" value="18" step="0.5" oninput="calcPrice()"><span class="fn">Filament cost per gram</span></div>
-      <div class="admin-field"><label>PETG Rate (KES/gram)</label><input class="c" type="number" id="ratePETG" value="25" step="0.5" oninput="calcPrice()"></div>
-      <div class="admin-field"><label>Volume Rate (KES/cm³)</label><input class="c" type="number" id="rateVolume" value="8" step="0.5" oninput="calcPrice()"><span class="fn">Machine time overhead</span></div>
-    </div>
-    <div class="admin-sec c">3D Printing — Quality Multipliers</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>Draft (0.3mm) Multiplier</label><input class="c" type="number" id="multDraft" value="0.85" step="0.05" oninput="calcPrice()"></div>
-      <div class="admin-field"><label>Standard (0.2mm)</label><input class="c" type="number" id="multStandard" value="1.00" step="0.05" oninput="calcPrice()"></div>
-      <div class="admin-field"><label>Fine (0.1mm) Multiplier</label><input class="c" type="number" id="multFine" value="1.35" step="0.05" oninput="calcPrice()"></div>
-    </div>
-    <div class="admin-sec c">3D Printing — Pricing Rules</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>Custom Colour Add-on (KES)</label><input class="c" type="number" id="addColour" value="150" step="10" oninput="calcPrice()"></div>
-      <div class="admin-field"><label>3D Min. Order (KES)</label><input class="c" type="number" id="minOrder" value="400" step="50" oninput="calcPrice()"></div>
-      <div class="admin-field"><label>3D Margin %</label><input class="c" type="number" id="marginPct" value="30" step="5" oninput="calcPrice()"></div>
-    </div>
-    <div class="admin-sec g">PCB — Base Rates</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>Base Rate (KES/cm²)</label><input class="g" type="number" id="pcbBaseRate" value="85" step="5" oninput="calcPcbPrice()"><span class="fn">Per cm² board area</span></div>
-      <div class="admin-field"><label>Double Layer Multiplier</label><input class="g" type="number" id="pcbDoubleLayerMult" value="1.8" step="0.1" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>PCB Min. Order (KES)</label><input class="g" type="number" id="pcbMinOrder" value="800" step="100" oninput="calcPcbPrice()"></div>
-    </div>
-    <div class="admin-sec g">PCB — Copper &amp; Trace Surcharges</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>2oz Copper (KES)</label><input class="g" type="number" id="pcbCopperSurcharge" value="300" step="50" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>Fine Trace 0.2mm (KES)</label><input class="g" type="number" id="pcbFineTrace" value="200" step="50" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>Ultra Trace 0.1mm (KES)</label><input class="g" type="number" id="pcbUltraTrace" value="500" step="50" oninput="calcPcbPrice()"></div>
-    </div>
-    <div class="admin-sec g">PCB — Solder Mask</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>Bare Board (KES add)</label><input class="g" type="number" id="pcbMaskBare" value="0" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>Coloured Mask (KES add)</label><input class="g" type="number" id="pcbMaskColour" value="250" step="50" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>Random Mask (KES add)</label><input class="g" type="number" id="pcbMaskRandom" value="100" step="50" oninput="calcPcbPrice()"></div>
-    </div>
-    <div class="admin-sec g">PCB — Surface Finish</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>HASL Standard (KES add)</label><input class="g" type="number" id="pcbFinishHASL" value="0" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>HASL Lead-Free (KES add)</label><input class="g" type="number" id="pcbFinishLF" value="150" step="50" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>ENIG Gold (KES add)</label><input class="g" type="number" id="pcbFinishENIG" value="600" step="50" oninput="calcPcbPrice()"></div>
-    </div>
-    <div class="admin-sec g">PCB — Assembly &amp; Overhead</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>Bare Board Fee (KES)</label><input class="g" type="number" id="pcbAssemBare" value="0" oninput="calcPcbPrice()"><span class="fn">Fabrication only</span></div>
-      <div class="admin-field"><label>Drilling Service (KES)</label><input class="g" type="number" id="pcbAssemDrilled" value="400" step="100" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>Full Assembly (KES)</label><input class="g" type="number" id="pcbAssemFull" value="1200" step="100" oninput="calcPcbPrice()"><span class="fn">Labour only</span></div>
-    </div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>Tools &amp; Chemicals Per Board (KES)</label><input class="g" type="number" id="pcbOverhead" value="200" step="50" oninput="calcPcbPrice()"><span class="fn">Etchant, bits, consumables</span></div>
-      <div class="admin-field"><label>PCB Margin %</label><input class="g" type="number" id="pcbMargin" value="35" step="5" oninput="calcPcbPrice()"></div>
-      <div class="admin-field"><label>Component Sourcing Markup %</label><input class="g" type="number" id="compMarkup" value="15" step="5" oninput="updateCompMarkupLabel()"></div>
-    </div>
-    <div class="admin-sec g">PCB — Design Service Fees</div>
-    <div class="admin-grid-2">
-      <div class="admin-field"><label>Simple Design (1–10 parts) KES</label><input class="g" type="number" id="designFeeSimple" value="1500" step="250" oninput="updateDesignFeeLabels()"></div>
-      <div class="admin-field"><label>Medium Design (11–50 parts) KES</label><input class="g" type="number" id="designFeeMed" value="2500" step="250" oninput="updateDesignFeeLabels()"></div>
-      <div class="admin-field"><label>Complex (51–100 parts) KES</label><input class="g" type="number" id="designFeeComplex" value="3500" step="250" oninput="updateDesignFeeLabels()"></div>
-      <div class="admin-field"><label>Very Complex (100+ parts) KES</label><input class="g" type="number" id="designFeeVeryComplex" value="4500" step="250" oninput="updateDesignFeeLabels()"></div>
-    </div>
-    <div class="admin-sec gd">Patron Codes — Valid on 3D &amp; PCB</div>
-    <div class="admin-grid">
-      <div class="admin-field"><label>Bronze Code — 5% off</label><input class="gd" type="text" id="codeBronze" value="QPBRONZE"><span class="fn">Share with Bronze patrons</span></div>
-      <div class="admin-field"><label>Silver Code — 10% off</label><input class="gd" type="text" id="codeSilver" value="QPSILVER"><span class="fn">Share with Silver patrons</span></div>
-      <div class="admin-field"><label>Gold Code — 15% off</label><input class="gd" type="text" id="codeGold" value="QPGOLD15"><span class="fn">Share with Gold patrons</span></div>
-    </div>
-    <div class="admin-actions">
-      <button class="btn-save" onclick="saveRates()">✦ Save &amp; Apply All Rates</button>
-      <span class="saved-msg" id="savedMsg">✦ All rates saved and applied</span>
-    </div>
-  </div>
-</div>
+
 <script>
 const WA="254797160016";
 const DENSITY={pla:1.24,petg:1.27};
@@ -1039,9 +927,9 @@ function updateInfill(){
 
 // PATRON DISCOUNT CODE
 function getDisc(code){
-  var b=(document.getElementById("codeBronze")?document.getElementById("codeBronze").value:"QPBRONZE").toUpperCase().trim();
-  var s=(document.getElementById("codeSilver")?document.getElementById("codeSilver").value:"QPSILVER").toUpperCase().trim();
-  var g=(document.getElementById("codeGold")?document.getElementById("codeGold").value:"QPGOLD15").toUpperCase().trim();
+  var b=_CODE_BRONZE.toUpperCase().trim();
+  var s=_CODE_SILVER.toUpperCase().trim();
+  var g=_CODE_GOLD.toUpperCase().trim();
   var c=(code||"").toUpperCase().trim();
   if(!c)return null;
   if(c===g)return{pct:15,tier:"Gold 15%"};
@@ -1060,15 +948,15 @@ function calcPrice(){
   var inf=parseInt(document.getElementById("infillSlider").value);
   var qty=Math.max(1,parseInt(document.getElementById("inputQty").value)||1);
   var code=document.getElementById("patronCode").value;
-  var rP=parseFloat((document.getElementById("ratePLA")||{value:"18"}).value)||18;
-  var rG=parseFloat((document.getElementById("ratePETG")||{value:"25"}).value)||25;
-  var rV=parseFloat((document.getElementById("rateVolume")||{value:"8"}).value)||8;
-  var mD=parseFloat((document.getElementById("multDraft")||{value:"0.85"}).value)||0.85;
-  var mS=parseFloat((document.getElementById("multStandard")||{value:"1.0"}).value)||1.0;
-  var mF=parseFloat((document.getElementById("multFine")||{value:"1.35"}).value)||1.35;
-  var cA=parseFloat((document.getElementById("addColour")||{value:"150"}).value)||150;
-  var mn=parseFloat((document.getElementById("minOrder")||{value:"400"}).value)||400;
-  var mg=(parseFloat((document.getElementById("marginPct")||{value:"30"}).value)||30)/100;
+  var rP=parseFloat(_r("ratePLA",18));
+  var rG=parseFloat(_r("ratePETG",25));
+  var rV=parseFloat(_r("rateVolume",8));
+  var mD=parseFloat(_r("multDraft",0.85));
+  var mS=parseFloat(_r("multStandard",1.0));
+  var mF=parseFloat(_r("multFine",1.35));
+  var cA=parseFloat(_r("addColour",150));
+  var mn=parseFloat(_r("minOrder",400));
+  var mg=(parseFloat(_r("marginPct",30)))/100;
   var disc=getDisc(code);
   if(wt===0&&vol===0){
     ["rbMaterial","rbVolume","rbQuality","rbInfill","rbColour","rbMargin","rbUnit"].forEach(function(id){document.getElementById(id).textContent="—";});
@@ -1121,24 +1009,24 @@ function calcPcbPrice(){
   var assembly=document.getElementById("pcbAssembly").value;
   var qty=Math.max(1,parseInt(document.getElementById("pcbQty").value)||1);
   var code=document.getElementById("pcbPatronCode").value;
-  var bR=parseFloat((document.getElementById("pcbBaseRate")||{value:"85"}).value)||85;
-  var dM=parseFloat((document.getElementById("pcbDoubleLayerMult")||{value:"1.8"}).value)||1.8;
-  var mn=parseFloat((document.getElementById("pcbMinOrder")||{value:"800"}).value)||800;
-  var cuS=parseFloat((document.getElementById("pcbCopperSurcharge")||{value:"300"}).value)||300;
-  var fT=parseFloat((document.getElementById("pcbFineTrace")||{value:"200"}).value)||200;
-  var uT=parseFloat((document.getElementById("pcbUltraTrace")||{value:"500"}).value)||500;
-  var mBare=parseFloat((document.getElementById("pcbMaskBare")||{value:"0"}).value)||0;
-  var mCol=parseFloat((document.getElementById("pcbMaskColour")||{value:"250"}).value)||250;
-  var mRand=parseFloat((document.getElementById("pcbMaskRandom")||{value:"100"}).value)||100;
-  var fH=parseFloat((document.getElementById("pcbFinishHASL")||{value:"0"}).value)||0;
-  var fL=parseFloat((document.getElementById("pcbFinishLF")||{value:"150"}).value)||150;
-  var fE=parseFloat((document.getElementById("pcbFinishENIG")||{value:"600"}).value)||600;
-  var aBare=parseFloat((document.getElementById("pcbAssemBare")||{value:"0"}).value)||0;
-  var aDrill=parseFloat((document.getElementById("pcbAssemDrilled")||{value:"400"}).value)||400;
-  var aFull=parseFloat((document.getElementById("pcbAssemFull")||{value:"1200"}).value)||1200;
-  var oh=parseFloat((document.getElementById("pcbOverhead")||{value:"200"}).value)||200;
-  var mg=(parseFloat((document.getElementById("pcbMargin")||{value:"35"}).value)||35)/100;
-  var cMup=parseFloat((document.getElementById("compMarkup")||{value:"15"}).value)||15;
+  var bR=parseFloat(_r("pcbBaseRate",85));
+  var dM=parseFloat(_r("pcbDoubleLayerMult",1.8));
+  var mn=parseFloat(_r("pcbMinOrder",800));
+  var cuS=parseFloat(_r("pcbCopperSurcharge",300));
+  var fT=parseFloat(_r("pcbFineTrace",200));
+  var uT=parseFloat(_r("pcbUltraTrace",500));
+  var mBare=parseFloat(_r("pcbMaskBare",0));
+  var mCol=parseFloat(_r("pcbMaskColour",250));
+  var mRand=parseFloat(_r("pcbMaskRandom",100));
+  var fH=parseFloat(_r("pcbFinishHASL",0));
+  var fL=parseFloat(_r("pcbFinishLF",150));
+  var fE=parseFloat(_r("pcbFinishENIG",600));
+  var aBare=parseFloat(_r("pcbAssemBare",0));
+  var aDrill=parseFloat(_r("pcbAssemDrilled",400));
+  var aFull=parseFloat(_r("pcbAssemFull",1200));
+  var oh=parseFloat(_r("pcbOverhead",200));
+  var mg=(parseFloat(_r("pcbMargin",35)))/100;
+  var cMup=parseFloat(_r("compMarkup",15));
   var disc=getDisc(code);
   var isAss=assembly==="assembled";
   document.getElementById("pcbComponentGroup").style.display=isAss?"block":"none";
@@ -1187,15 +1075,15 @@ function calcPcbPrice(){
 }
 
 function updateDesignFeeLabels(){
-  var s=(document.getElementById("designFeeSimple")||{value:"1500"}).value||"1500";
-  var vc=(document.getElementById("designFeeVeryComplex")||{value:"4500"}).value||"4500";
+  var s=_r("designFeeSimple",1500);
+  var vc=_r("designFeeVeryComplex",4500);
   var e1=document.getElementById("designFeeLabel");
   var e2=document.getElementById("designFeeComplexLabel");
   if(e1)e1.textContent="KES "+s;
   if(e2)e2.textContent="KES "+vc;
 }
 function updateCompMarkupLabel(){
-  var v=(document.getElementById("compMarkup")||{value:"15"}).value||"15";
+  var v=_r("compMarkup",15);
   if(document.getElementById("compMarkupLabel"))document.getElementById("compMarkupLabel").textContent=v;
   if(document.getElementById("compMarkupLabel2"))document.getElementById("compMarkupLabel2").textContent=v;
 }
@@ -1407,50 +1295,49 @@ function showToast(msg){
   setTimeout(function(){t.classList.remove("show");},3200);
 }
 
-// ADMIN PANEL
-var ADMIN_PW="qpAdmin2025";
-var clk=0,clkT=null;
-document.querySelector(".footer-bottom").addEventListener("click",function(){
-  clk++;
-  clearTimeout(clkT);
-  clkT=setTimeout(function(){clk=0;},600);
-  if(clk>=3){clk=0;openAdmin();}
-});
-function openAdmin(){
-  document.getElementById("adminOverlay").classList.add("open");
-  document.getElementById("adminLogin").style.display="flex";
-  document.getElementById("adminContent").classList.remove("show");
-  document.getElementById("adminPwInput").value="";
-  document.getElementById("adminErr").classList.remove("show");
-  setTimeout(function(){document.getElementById("adminPwInput").focus();},100);
+// ADMIN PANEL REMOVED — rates are now set as constants below.
+// To update rates: edit these values locally and redeploy.
+// NEVER put discount codes or sensitive rates in a client-side admin panel.
+
+// ── 3D Printing Rates ──────────────────────────────────────────
+var _RATE_PLA=18,_RATE_PETG=25,_RATE_VOL=8;
+var _MULT_DRAFT=0.85,_MULT_STD=1.0,_MULT_FINE=1.35;
+var _ADD_COLOUR=150,_MIN_ORDER_3D=400,_MARGIN_3D=30;
+
+// ── PCB Rates ──────────────────────────────────────────────────
+var _PCB_BASE=85,_PCB_DBL=1.8,_PCB_MIN=800;
+var _PCB_CU=300,_PCB_FT=200,_PCB_UT=500;
+var _PCB_MASK_BARE=0,_PCB_MASK_COL=250,_PCB_MASK_RAND=100;
+var _PCB_FIN_HASL=0,_PCB_FIN_LF=150,_PCB_FIN_ENIG=600;
+var _PCB_ASSEM_BARE=0,_PCB_ASSEM_DRILL=400,_PCB_ASSEM_FULL=1200;
+var _PCB_OH=200,_PCB_MARGIN=35,_COMP_MARKUP=15;
+
+// ── Design Fees ────────────────────────────────────────────────
+var _FEE_SIMPLE=1500,_FEE_MED=2500,_FEE_COMPLEX=3500,_FEE_VCOMPLEX=4500;
+
+// ── Patron Discount Codes (change these periodically) ──────────
+// These are visible in source — rotate them regularly.
+var _CODE_BRONZE="QPBRONZE",_CODE_SILVER="QPSILVER",_CODE_GOLD="QPGOLD15";
+
+// Helper: read a constant (replaces the old admin DOM reads)
+function _r(id,def){
+  var m={
+    ratePLA:_RATE_PLA,ratePETG:_RATE_PETG,rateVolume:_RATE_VOL,
+    multDraft:_MULT_DRAFT,multStandard:_MULT_STD,multFine:_MULT_FINE,
+    addColour:_ADD_COLOUR,minOrder:_MIN_ORDER_3D,marginPct:_MARGIN_3D,
+    pcbBaseRate:_PCB_BASE,pcbDoubleLayerMult:_PCB_DBL,pcbMinOrder:_PCB_MIN,
+    pcbCopperSurcharge:_PCB_CU,pcbFineTrace:_PCB_FT,pcbUltraTrace:_PCB_UT,
+    pcbMaskBare:_PCB_MASK_BARE,pcbMaskColour:_PCB_MASK_COL,pcbMaskRandom:_PCB_MASK_RAND,
+    pcbFinishHASL:_PCB_FIN_HASL,pcbFinishLF:_PCB_FIN_LF,pcbFinishENIG:_PCB_FIN_ENIG,
+    pcbAssemBare:_PCB_ASSEM_BARE,pcbAssemDrilled:_PCB_ASSEM_DRILL,pcbAssemFull:_PCB_ASSEM_FULL,
+    pcbOverhead:_PCB_OH,pcbMargin:_PCB_MARGIN,compMarkup:_COMP_MARKUP,
+    designFeeSimple:_FEE_SIMPLE,designFeeMed:_FEE_MED,
+    designFeeComplex:_FEE_COMPLEX,designFeeVeryComplex:_FEE_VCOMPLEX,
+    codeBronze:_CODE_BRONZE,codeSilver:_CODE_SILVER,codeGold:_CODE_GOLD
+  };
+  return m[id]!==undefined?m[id]:def;
 }
-function checkAdminPw(){
-  if(document.getElementById("adminPwInput").value===ADMIN_PW){
-    document.getElementById("adminLogin").style.display="none";
-    document.getElementById("adminContent").classList.add("show");
-  }else{
-    document.getElementById("adminErr").classList.add("show");
-    document.getElementById("adminPwInput").value="";
-    setTimeout(function(){document.getElementById("adminErr").classList.remove("show");},2500);
-  }
-}
-function closeAdmin(){
-  document.getElementById("adminOverlay").classList.remove("open");
-  document.getElementById("adminContent").classList.remove("show");
-}
-document.addEventListener("keydown",function(e){
-  if(e.key==="Escape")closeAdmin();
-  if(e.ctrlKey&&e.shiftKey&&e.key==="Q"){e.preventDefault();openAdmin();}
-});
-function saveRates(){
-  calcPrice();
-  calcPcbPrice();
-  updateDesignFeeLabels();
-  updateCompMarkupLabel();
-  var m=document.getElementById("savedMsg");
-  m.classList.add("show");
-  setTimeout(function(){m.classList.remove("show");},3000);
-}
+
 
 // FLOATING NAV — ACTIVE SECTION TRACKING
 var allSec=document.querySelectorAll("section[id]");
